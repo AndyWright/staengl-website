@@ -1,0 +1,13 @@
+# needs to be symlinked to ~/.tmuxinator/staengl.yml
+# ln -s ~/wrk/staengl/staengl-website/staengl.yml ~/.tmuxinator/staengl.yml
+# http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project
+project_name: staengl
+project_root: ~/wrk/staengl/staengl-website
+# socket_name: foo # Not needed. Remove to use default socket
+tabs:
+  - console: pull && subl .
+  - jekass:
+      layout: a467,88x47,0,0[88x23,0,0,88x23,0,29]
+      panes:
+        - sleep 7 && bundle exec jekyll serve --watch
+        - sleep 5 && bundle exec compass watch -c compass_config.rb

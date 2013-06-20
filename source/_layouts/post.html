@@ -1,0 +1,30 @@
+---
+layout: blog
+---
+<div class="row blog-post">
+  <div class="small-12 large-10 large-centered columns">
+    <div class="post-date">
+      <span class="month">{{ page.month }}</span>
+      <span class="day">{{ page.day }}</span>
+      <span class="year">{{ page.year }}</span>
+    </div>
+    <!-- <div class="post-image"><img src="{{ page.image }}"></div> -->
+    <div class="post-title">{{ page.title }}</div>
+    <div class="post-content">{{ content }}</div>
+    <div class="post-author"><span>Author:&nbsp;</span>{{ page.author }}</div>
+    <div class="post-tags">
+      <div class="tags-title">Tags:</div>
+      <div class="tag-list">
+        <ul class="tag-list">
+          {% for tag in page.tags %}
+          <li class="tag-list"><a class="tag-link" href="/blog/tag/{{ tag }}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+<!--       <div class="post-links">
+      <span>Sharing is Caring:&nbsp;</span>
+    </div> -->
+  </div>
+</div>

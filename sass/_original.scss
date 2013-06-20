@@ -1,0 +1,58 @@
+// this is stuff from the original splash page
+
+h2, h4 {
+  font-family: "ChunkFive";
+  font-weight: normal;
+  color: rgb(72, 72, 72);
+}
+
+h2 {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+
+h4 {
+  margin-bottom: 33px;
+}
+
+img.logo {
+  margin: 6px 0 20px 0;
+}
+
+img.owl {
+  border: solid 1px #aaa;
+}
+
+div[role='content'] {
+  @include border-radius(4px);
+  border: solid 1px #aaa;
+  font-size: 1.25em;
+  color: rgb(72, 72, 72);
+  background-color: rgb(246, 245, 237);
+  margin-top: 12px;
+  // padding-bottom: 33px;
+}
+
+.wholesalers {
+  font-style: italic;
+  margin-top: 12px;
+  color: rgb(72, 72, 72);
+  p {
+    font-size: 1.1em;
+    // margin-bottom: 11px;
+  }
+}
+
+//
+
+div[role='bottom'] {
+  // text-align: center;
+  font-size: .9em;
+  color: #aaa;
+  // margin-top: 14px;
+  // border-top: solid 1px #aaa;
+
+}
+
+textarea { height: auto; }
+
