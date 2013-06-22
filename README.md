@@ -1,14 +1,8 @@
-some stuff from here: http://retrovectors.com/
 
-TODO:
-* switch to configatron
-* index
-* teaser
-* household
-* javascript for changing score
-* profile page
-* save emails to simpledb
-* use AWS mail service
+this is the initial build of the site . .
 
-###Development environment/testing
-* to test the api, use http://localhost:9393
+### links for wordpress theme development
+
+http://www.inverseparadox.com/2013/05/johns-windows-wordpress-theme-development-workflow-now-with-sass/
+
+https://github.com/inverse-paradox/boilerplate
