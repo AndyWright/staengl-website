@@ -4,14 +4,12 @@ staengl-website
 wordpress website for staengl engineering
 
 TODO:
+
 * set up wiki and document workflow
 * set up hosting
-* choose base theme
 
-###theme to start with . .
-* https://github.com/milohuang/reverie
-* http://www.johnparris.com/basestation/
-* http://themes.required.ch/ (zurb foundation 3)
+###theme
+the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)
 
 ###links to check out
 * http://theme.fm/2011/08/tutorial-deploying-wordpress-with-capistrano-2082/

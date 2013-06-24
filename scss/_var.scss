@@ -1,0 +1,43 @@
+
+/* ===========================================================
+  SOME COLORS
+=========================================================== */
+
+$light-gray: #e4e4e4;
+$red: #c40c1d;
+$limon: rgba(180, 255, 103, .44);
+$pinkie: rgba(255, 105, 180, .44);
+$peachie: rgba(255, 229, 204, .44);
+
+/* ===========================================================
+   BLOG COLORS
+=========================================================== */
+
+$post-meta-bg: #f2f2f2;
+$post-meta-border: #e5e5e5;
+$comment-bg: #fafafa;
+$comment-border: #e0e0e0;
+$comment-alt-bg: #f2f2f2;
+$comment-alt-border: #d9d9d9;
+$comment-meta-border: #e5e5e5;
+
+/* ===========================================================
+   EXTENDS
+=========================================================== */
+// these were from original boilerplate. might want to delete them
+// %form-field-base {
+//     padding: 3px;
+//     font: $default-font-family $default-font-size;
+//     color: $default-font-color;
+//     background: #fff;
+//     border: 1px #ccc solid;
+// }
+// %button-base {
+//     padding: 3px 6px;
+//     font: $default-font-family $default-font-size;
+//     color: $default-font-color;
+//     border: 1px #ccc solid;
+//     border-radius: 5px;
+//     @include linear-gradient(to bottom, #fff, 0, #eee, 100);
+//     cursor: pointer;
+// }
