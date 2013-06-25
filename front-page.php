@@ -1,19 +1,32 @@
-<?php
-/*
-Template Name: front page
-*/
-?>
-
 <?php get_header(); ?>
 
-<h1>front page</h1>
+<div class="row inner-content">
+
+  <h1>front-page.php</h1>
+
+  <div class="row">
+    <div class="large-4 columns posts">
 
 <?php if (have_posts()): ?>
+      <h3>blog posts</h3>
     <?php while (have_posts()): the_post(); ?>
 
+        <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
 
     <?php endwhile; ?>
+
+    <?php if( get_previous_posts_link() ) : ?>
+
+        <span class="pagination button alignleft"><?php previous_posts_link('&laquo; Newer Entries'); ?></span>
+
+    <?php endif; ?>
+
+    <?php if( get_next_posts_link() ) : ?>
+
+        <span class="pagination button alignright"><?php next_posts_link('Older Entries &raquo;'); ?></span>
+
+    <?php endif; ?>
 
 <?php else: ?>
 
@@ -21,6 +34,12 @@ Template Name: front page
 
 <?php endif; ?>
 
-<?php get_sidebar(); ?>
+    </div>
+  </div>
+
+</div>
+
+
+
 
 <?php get_footer(); ?>

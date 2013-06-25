@@ -24,3 +24,23 @@ $ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/
 * http://mattbanks.me/wordpress-deployments-with-git/
 * http://mattbanks.me/wordpress-deployments-with-git/
 * http://www.walmik.com/2012/03/manage-your-custom-wordpress-theme-using-git-instead-of-ftp/
+
+
+deployment
+=====
+
+make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:
+
+```
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+```

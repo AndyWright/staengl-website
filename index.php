@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+ <h1>index.php</h1>
+
  <div class="row welcome">
     <div class="large-12 columns">
       <h1>welcome to <a href="https://github.com/ngn33r/wp-zurb-boilerplate">wp-zurb-boilerplate</a></h1>

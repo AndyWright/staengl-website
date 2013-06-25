@@ -1,7 +1,4 @@
 <?php
-/**
- * @package WordPress
- */
 $title = '';
 if (is_category()) { // category
     $title = single_cat_title('', false);

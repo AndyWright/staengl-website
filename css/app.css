@@ -6928,38 +6928,78 @@ a.th {
 }
 
 /* line 3, ../scss/_styles.scss */
-body {
-  font-family: 'Open Sans', sans-serif;
+html, body {
   background-color: whitesmoke;
 }
 
-/* line 9, ../scss/_styles.scss */
-header.row {
-  border: solid 1px #d9d9d9;
-  background-color: rgba(255, 229, 204, 0.44);
-  color: #666;
-  padding: 11px;
-  margin-top: 11px;
-  margin-bottom: 11px;
-  text-align: center;
+/* line 7, ../scss/_styles.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #636363;
 }
 
-/* line 19, ../scss/_styles.scss */
-.home-content {
+/* line 16, ../scss/_styles.scss */
+header.row {
+  border-bottom: solid 1px #d9d9d9;
+  margin-top: 11px;
+}
+
+/* line 21, ../scss/_styles.scss */
+#little-logo {
+  background-image: url("../img/little-logo.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 69px;
+  margin: 18px 0 0 18px;
+}
+
+/* line 29, ../scss/_styles.scss */
+#menu-main {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 44px;
+}
+/* line 36, ../scss/_styles.scss */
+#menu-main li {
+  float: left;
+  margin-left: 30px;
+  padding-bottom: 18px;
+  font-variant: small-caps;
+  font-size: 1.25em;
+  font-weight: 300;
+}
+/* line 44, ../scss/_styles.scss */
+#menu-main li.current_page_item {
+  border-bottom: 4px solid #5fa73a;
+}
+/* line 48, ../scss/_styles.scss */
+#menu-main a:link, #menu-main a:visited, #menu-main a:hover, #menu-main a:active {
+  color: #636363;
+}
+/* line 51, ../scss/_styles.scss */
+#menu-main a:hover {
+  color: #292928;
+}
+
+/* line 58, ../scss/_styles.scss */
+.inner-content, .home-content {
   background-color: #fff;
   min-height: 600px;
 }
 
-/* line 26, ../scss/_styles.scss */
+/* line 65, ../scss/_styles.scss */
 .posts ul {
   list-style: none;
 }
-/* line 29, ../scss/_styles.scss */
+/* line 68, ../scss/_styles.scss */
 .posts li {
   margin-bottom: 6px;
 }
 
-/* line 32, ../scss/_styles.scss */
+/* line 71, ../scss/_styles.scss */
 footer.row {
   background-color: #5fa73a;
   background-image: url("../img/footer-bg.png");
@@ -6970,7 +7010,7 @@ footer.row {
   text-align: center;
 }
 
-/* line 42, ../scss/_styles.scss */
+/* line 81, ../scss/_styles.scss */
 .copyright {
   font-size: 0.75em;
 }

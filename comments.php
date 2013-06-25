@@ -1,7 +1,3 @@
-<?php
-/**
- */
-?>
 
 <div class="post-comments">
 

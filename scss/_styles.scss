@@ -1,22 +1,61 @@
 // actual styles for the STAENGL site
 
+html, body {
+  background-color: rgb(245,245,245);
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: rgb(245,245,245);
+  color: $medium-greyish;
   // background-color: $limon;
 }
 
+// // // // // // //
+// header stuff
+// // // // // // //
 header.row {
-  border: solid 1px #d9d9d9;
-  background-color: $peachie;
-  color: #666;
-  padding: 11px;
+  border-bottom: solid 1px #d9d9d9;
   margin-top: 11px;
-  margin-bottom: 11px;
-  text-align: center;
 }
 
-.home-content {
+#little-logo {
+  background-image: url('../img/little-logo.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 69px;
+  margin: 18px 0 0 18px;
+}
+
+#menu-main {
+  width: 100%;
+  float: left;
+  margin: 0; // 0 3em 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 44px;
+  li {
+    float: left;
+    margin-left: 30px;
+    padding-bottom: 18px;
+    font-variant: small-caps;
+    font-size: 1.25em;
+    font-weight: 300;
+  }
+  li.current_page_item {
+    border-bottom: 4px solid $footer-green;
+  }
+
+  a:link, a:visited, a:hover, a:active {
+    color: $medium-greyish;
+  }
+  a:hover {
+    // font-weight: 400;
+    color: $darker-greyish;
+  }
+}
+
+
+.inner-content, .home-content {
   background-color: #fff;
   min-height: 600px;
  }
@@ -42,3 +81,4 @@ footer.row {
 .copyright {
   font-size: emCalc(12px);
 }
+
