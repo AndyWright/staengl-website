@@ -1,8 +1,12 @@
 <?php
-/**
- * @package WordPress
- */
-get_header(); ?>
+/*
+Template Name: front page
+*/
+?>
+
+<?php get_header(); ?>
+
+<h1>front page</h1>
 
 <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>

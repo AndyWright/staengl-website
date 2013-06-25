@@ -1,8 +1,6 @@
-<?php
-/**
- * @package WordPress
- */
-get_header(); ?>
+<?php get_header(); ?>
+
+<h1>single</h1>
 
 <?php if (have_posts()): ?>
 

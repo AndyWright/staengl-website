@@ -5,8 +5,8 @@
 ?>
 
   <footer class="row">
-    <div class="large-12 columns">
-      footer content goes here
+    <div class="large-12 columns copyright">
+      Copyright © 2004-<?php echo date("Y"); ?>, Staengl Engineering. All rights reserved.
     </div>
   </footer>
 

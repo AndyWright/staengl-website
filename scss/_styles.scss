@@ -1,5 +1,12 @@
+// actual styles for the STAENGL site
 
-header.row, footer.row {
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(245,245,245);
+  // background-color: $limon;
+}
+
+header.row {
   border: solid 1px #d9d9d9;
   background-color: $peachie;
   color: #666;
@@ -9,12 +16,10 @@ header.row, footer.row {
   text-align: center;
 }
 
-.welcome {
-  text-align: center;
-  h1 {
-    font-size: 3em;
-  }
-}
+.home-content {
+  background-color: #fff;
+  min-height: 600px;
+ }
 
 .posts {
   // padding-left: 6px;
@@ -22,4 +27,18 @@ header.row, footer.row {
     list-style: none;
   }
   li { margin-bottom: 6px; }
+}
+
+footer.row {
+  background-color: $footer-green;
+  background-image: url('../img/footer-bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.copyright {
+  font-size: emCalc(12px);
 }

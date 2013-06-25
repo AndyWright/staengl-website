@@ -1,8 +1,4 @@
-<?php
-/**
- * @package WordPress
- */
-get_header(); ?>
+<?php get_header(); ?>
 
  <div class="row welcome">
     <div class="large-12 columns">
@@ -13,7 +9,7 @@ get_header(); ?>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row main-content">
     <div class="large-8 columns home-content">
 
       <h3>static home content</h3>
