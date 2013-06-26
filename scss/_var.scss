@@ -17,6 +17,7 @@ $peachie: rgba(255, 229, 204, .44);
 $footer-green: #5fa73a;
 $medium-greyish: #636363;
 $darker-greyish: #292928;
+$borderline: #d9d9d9;
 
 /* ===========================================================
    BLOG COLORS
@@ -29,6 +30,14 @@ $comment-border: #e0e0e0;
 $comment-alt-bg: #f2f2f2;
 $comment-alt-border: #d9d9d9;
 $comment-meta-border: #e5e5e5;
+
+
+/* ===========================================================
+   foundation configurations
+=========================================================== */
+
+$tooltip-padding: emCalc(14px);
+
 
 /* ===========================================================
    EXTENDS

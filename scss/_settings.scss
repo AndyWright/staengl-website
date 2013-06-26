@@ -1184,8 +1184,8 @@ $total-columns: 12;
 // $has-tip-font-color-hover: $primary-color;
 // $has-tip-cursor-type: help;
 
-// $tooltip-padding: emCalc(8px);
-// $tooltip-bg: #000;
+$tooltip-padding: emCalc(20px);
+$tooltip-bg: scale-lightness(#000, 22%);
 // $tooltip-font-size: emCalc(15px);
 // $tooltip-font-weight: bold;
 // $tooltip-font-color: #fff;

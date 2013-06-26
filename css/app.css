@@ -760,6 +760,99 @@ select {
     padding-top: 0;
   }
 }
+/* Tooltips */
+/* line 29, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+.has-tip {
+  border-bottom: dotted 1px #cccccc;
+  cursor: help;
+  font-weight: bold;
+  color: #333333;
+}
+/* line 36, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+.has-tip:hover, .has-tip:focus {
+  border-bottom: dotted 1px #196177;
+  color: #2ba6cb;
+}
+/* line 42, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+.has-tip.tip-left, .has-tip.tip-right {
+  float: none !important;
+}
+
+/* line 45, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+.tooltip {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  font-weight: bold;
+  font-size: 0.9375em;
+  line-height: 1.3;
+  padding: 1.25em;
+  max-width: 85%;
+  left: 50%;
+  width: 100%;
+  color: white;
+  background: #383838;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 60, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+.tooltip > .nub {
+  display: block;
+  left: 5px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid 5px;
+  border-color: transparent transparent #383838 transparent;
+  top: -10px;
+}
+/* line 71, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+.tooltip.opened {
+  color: #2ba6cb !important;
+  border-bottom: dotted 1px #196177 !important;
+}
+
+/* line 77, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+.tap-to-close {
+  display: block;
+  font-size: 0.625em;
+  color: #888888;
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 86, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+  .tooltip > .nub {
+    border-color: transparent transparent #383838 transparent;
+    top: -10px;
+  }
+  /* line 90, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+  .tooltip.tip-top > .nub {
+    border-color: #383838 transparent transparent transparent;
+    top: auto;
+    bottom: -10px;
+  }
+  /* line 97, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+  .tooltip.tip-left, .tooltip.tip-right {
+    float: none !important;
+  }
+  /* line 99, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+  .tooltip.tip-left > .nub {
+    border-color: transparent transparent transparent #383838;
+    right: -10px;
+    left: auto;
+    top: 50%;
+    margin-top: -5px;
+  }
+  /* line 106, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_tooltips.scss */
+  .tooltip.tip-right > .nub {
+    border-color: transparent #383838 transparent transparent;
+    right: auto;
+    left: -10px;
+    top: 50%;
+    margin-top: -5px;
+  }
+}
 /* ===========================================================
   SOME COLORS
 =========================================================== */
@@ -768,6 +861,9 @@ select {
 =========================================================== */
 /* ===========================================================
    BLOG COLORS
+=========================================================== */
+/* ===========================================================
+   foundation configurations
 =========================================================== */
 /* ===========================================================
    EXTENDS
@@ -1033,13 +1129,13 @@ html, body {
   padding: 0;
 }
 
-/* line 9, ../scss/_styles.scss */
+/* line 10, ../scss/_styles.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   color: #636363;
 }
 
-/* line 21, ../scss/_styles.scss */
+/* line 22, ../scss/_styles.scss */
 header, footer, div.innards {
   position: relative;
   width: 1200px;
@@ -1047,7 +1143,17 @@ header, footer, div.innards {
   padding: 0 120px;
 }
 
-/* line 25, ../scss/_styles.scss */
+/* line 26, ../scss/_styles.scss */
+div.hero {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 120px;
+  padding: 0;
+  z-index: 0 !important;
+}
+
+/* line 36, ../scss/_styles.scss */
 .clear {
   *zoom: 1;
 }
@@ -1061,46 +1167,41 @@ header, footer, div.innards {
   clear: both;
 }
 
-/* line 29, ../scss/_styles.scss */
+/* line 40, ../scss/_styles.scss */
 header {
   border-bottom: solid 1px #d9d9d9;
-  margin-top: 22px;
 }
-
-/* line 34, ../scss/_styles.scss */
-#little-logo, #big-logo {
+/* line 42, ../scss/_styles.scss */
+header .logo {
   background-image: url("../img/little-logo.png");
+  background-position: 0 28px;
   background-repeat: no-repeat;
-  height: 120px;
+  height: 116px;
   width: 320px;
-  margin: 0 0 15px 0;
+  margin: 0;
   padding: 0;
   float: left;
+  position: relative;
+  z-index: 999 !important;
 }
-
-/* line 44, ../scss/_styles.scss */
-#little-logo {
-  background-image: url("../img/little-logo.png");
-}
-
-/* line 48, ../scss/_styles.scss */
-#big-logo {
-  background-image: url("../img/big-boi.jpg");
-}
-
-/* line 52, ../scss/_styles.scss */
-.menu {
-  padding-top: 22px;
+/* line 54, ../scss/_styles.scss */
+header .menu {
+  padding-top: 38px;
   float: left;
 }
 
-/* line 59, ../scss/_styles.scss */
+/* line 62, ../scss/_styles.scss */
+header.front-page .logo {
+  background-image: none;
+}
+
+/* line 70, ../scss/_styles.scss */
 #menu-main {
   list-style: none;
   float: left;
   margin: 0;
 }
-/* line 64, ../scss/_styles.scss */
+/* line 75, ../scss/_styles.scss */
 #menu-main li {
   float: left;
   margin-left: 30px;
@@ -1109,38 +1210,129 @@ header {
   font-size: 1.25em;
   font-weight: 300;
 }
-/* line 72, ../scss/_styles.scss */
+/* line 83, ../scss/_styles.scss */
 #menu-main li.current_page_item {
   border-bottom: 3px solid #5fa73a;
 }
-/* line 76, ../scss/_styles.scss */
+/* line 87, ../scss/_styles.scss */
 #menu-main a:link, #menu-main a:visited, #menu-main a:hover, #menu-main a:active {
   color: #636363;
   text-decoration: none;
 }
-/* line 80, ../scss/_styles.scss */
+/* line 91, ../scss/_styles.scss */
 #menu-main a:hover {
   color: #292928;
 }
 
-/* line 86, ../scss/_styles.scss */
+/* line 97, ../scss/_styles.scss */
 div.innards {
+  *zoom: 1;
+  border-bottom: solid 1px #d9d9d9;
   background-color: #fff;
-  min-height: 600px;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  min-height: 44px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* line 121, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
+div.innards:before, div.innards:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
+div.innards:after {
+  clear: both;
 }
 
-/* line 95, ../scss/_styles.scss */
+/* line 106, ../scss/_styles.scss */
+.innards.bottomless {
+  border-bottom: 0;
+}
+
+/* line 108, ../scss/_styles.scss */
+.titles, .copy, .badges {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 113, ../scss/_styles.scss */
+.one, .two, .three {
+  border-left: solid 1px #d9d9d9;
+  font-weight: 300;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  float: left;
+  width: 320px;
+}
+/* line 120, ../scss/_styles.scss */
+.one p, .two p, .three p {
+  margin: 25px;
+}
+
+/* line 122, ../scss/_styles.scss */
+.three {
+  border-right: solid 1px #d9d9d9;
+  width: 317px;
+}
+
+/* line 126, ../scss/_styles.scss */
+.titles {
+  margin-top: 150px;
+}
+/* line 128, ../scss/_styles.scss */
+.titles .one, .titles .two, .titles .three {
+  border-width: 3px;
+  font-weight: 400;
+  padding-left: 25px;
+}
+/* line 134, ../scss/_styles.scss */
+.titles .one, .titles .two {
+  color: #5fa73a;
+}
+/* line 137, ../scss/_styles.scss */
+.titles .three {
+  width: 319px;
+}
+
+/* line 141, ../scss/_styles.scss */
+.copy, .badges {
+  margin-left: 1px;
+}
+
+/* line 145, ../scss/_styles.scss */
+.copy .one, .copy .two, .copy .three {
+  font-size: 0.8125em;
+  height: 515px;
+}
+/* line 150, ../scss/_styles.scss */
+.copy .one, .copy .two {
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+/* line 154, ../scss/_styles.scss */
+.copy .one {
+  background-image: url("../img/what.png");
+}
+/* line 155, ../scss/_styles.scss */
+.copy .two {
+  background-image: url("../img/philosophy.png");
+}
+
+/* line 158, ../scss/_styles.scss */
+.badges .one, .badges .two, .badges .three {
+  height: 200px;
+  padding: 50px 0 0 55px;
+}
+
+/* line 166, ../scss/_styles.scss */
 .posts ul {
   list-style: none;
 }
-/* line 98, ../scss/_styles.scss */
+/* line 169, ../scss/_styles.scss */
 .posts li {
   margin-bottom: 6px;
 }
 
-/* line 101, ../scss/_styles.scss */
+/* line 172, ../scss/_styles.scss */
 footer {
   background-color: #5fa73a;
   background-image: url("../img/footer-bg.png");
@@ -1152,7 +1344,7 @@ footer {
   font-size: 0.75em;
 }
 
-/* line 112, ../scss/_styles.scss */
+/* line 183, ../scss/_styles.scss */
 .copyright {
   font-size: 0.75em;
 }

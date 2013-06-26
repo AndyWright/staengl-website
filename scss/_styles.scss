@@ -2,6 +2,7 @@
 
 html, body {
   background-color: rgb(245,245,245);
+  // background-color: $limon;
   margin: 0;
   padding: 0;
 }
@@ -22,38 +23,48 @@ header, footer, div.innards {
   @include container;
 }
 
+div.hero {
+  @include container;
+  padding: 0;
+  // margin-top: -22px;
+  z-index: 0 !important;
+  // img {
+
+  // }
+}
+
 .clear {
   @include clearfix;
 }
 
 header {
-  border-bottom: solid 1px #d9d9d9;
-  margin-top: 22px;
+  border-bottom: solid 1px $borderline;
+  .logo {
+    background-image: url('../img/little-logo.png');
+    background-position: 0 28px;
+    background-repeat: no-repeat;
+    height: 116px;
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    z-index: 999 !important;
+  }
+  .menu {
+    padding-top: 38px;
+    float: left;
+  }
 }
 
-#little-logo, #big-logo {
-  background-image: url('../img/little-logo.png');
-  background-repeat: no-repeat;
-  height: 120px;
-  width: 320px;
-  margin: 0 0 15px 0;
-  padding: 0;
-  float: left;
-}
-
-#little-logo {
-  background-image: url('../img/little-logo.png');
-}
-
-#big-logo {
-  background-image: url('../img/big-boi.jpg');
-}
-
-.menu {
-  // padding: 43px 0 0 0;
-  padding-top: 22px;
-  // margin-left: 151px;
-  float: left;
+header.front-page {
+  // border-bottom: 0;
+  .logo {
+    background-image: none;
+  }
+  .menu {
+    // padding-top: 37px;
+  }
 }
 
 #menu-main {
@@ -84,10 +95,70 @@ header {
 }
 
 div.innards {
+  @include clearfix;
+  border-bottom: solid 1px $borderline;
   background-color: #fff;
-  min-height: 600px;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  min-height: 44px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.innards.bottomless { border-bottom: 0; }
+
+.titles, .copy, .badges {
+  margin: 0;
+  padding: 0;
+}
+
+.one, .two, .three {
+  border-left: solid 1px $borderline;
+  font-weight: 300;
+  font-size: emCalc(20px);
+  line-height: emCalc(20px);
+  float: left;
+  width: 320px;
+  p { margin: 25px; }
+}
+.three {
+  border-right: solid 1px $borderline;
+  width: 317px;
+}
+.titles {
+  margin-top: 150px;
+  .one, .two, .three {
+    border-width: 3px;
+    font-weight: 400;
+    padding-left: 25px;
+    // background-color: $limon;
+  }
+  .one, .two {
+    color: $footer-green;
+  }
+  .three {
+    width: 319px;
+  }
+}
+.copy, .badges {
+  margin-left: 1px;  // to offset the borders
+}
+.copy {
+  .one, .two, .three {
+    font-size: emCalc(13px);
+    height: 515px;
+    // background-color: $peachie;
+  }
+  .one, .two {
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+  .one { background-image: url('../img/what.png'); }
+  .two { background-image: url('../img/philosophy.png'); }
+}
+.badges {
+  .one, .two, .three {
+    height: 200px;
+    padding: 50px 0 0 55px;
+  }
 }
 
 .posts {

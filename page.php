@@ -1,5 +1,8 @@
 <?php get_header(); ?>
-    <h2>page.php</h2>
+
+<div class="innards">
+
+    <h4>page.php</h4>
 
 <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
@@ -13,5 +16,7 @@
     <?php get_template_part('notfound'); ?>
 
 <?php endif; ?>
+
+</div> <!-- class="innards" -->
 
 <?php get_footer(); ?>

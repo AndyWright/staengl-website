@@ -83,7 +83,7 @@ function boiler_js()
     // wp_enqueue_script('boiler-placeholder-js', get_template_directory_uri() . '/js/foundation/foundation.placeholder.js', null, null, true);
     // wp_enqueue_script('boiler-reveal-js', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', null, null, true);
     // wp_enqueue_script('boiler-section-js', get_template_directory_uri() . '/js/foundation/foundation.section.js', null, null, true);
-    // wp_enqueue_script('boiler-tooltips-js', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', null, null, true);
+    wp_enqueue_script('boiler-tooltips-js', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', null, null, true);
     // wp_enqueue_script('boiler-topbar-js', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', null, null, true);
     wp_enqueue_script('boiler-theme-js', get_template_directory_uri() . '/js/theme.js', null, null, true);
     if (is_singular('post')){
@@ -112,7 +112,7 @@ add_action('wp_head', 'boiler_header_icons');
 //     register_options_page('Options Page Name');
 // }
 
-function demo_image($image_root)
+function staengl_image($image_root)
 {
     echo get_template_directory_uri() . '/img/' . $image_root;
 }

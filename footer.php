@@ -1,4 +1,3 @@
-  </div> <!-- class="innards" -->
   <footer>
     Copyright © 2004-<?php echo date("Y"); ?>, Staengl Engineering. All rights reserved.
   </footer>

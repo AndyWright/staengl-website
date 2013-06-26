@@ -13,13 +13,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header>
 <?php if (is_front_page()) { ?>
-    <div id="big-logo">&nbsp;</div>
+  <header class="front-page">
+    <a href="/"><div class="logo"><img src="<?php staengl_image('big-boi.jpg'); ?>"></div></a>
 <?php } else { ?>
-    <a href="/"><div id="little-logo">&nbsp;</div></a>
+  <header>
+    <a href="/"><div class="logo">&nbsp;</div></a>
 <?php } ?>
     <div class="menu"><?php wp_nav_menu( 'menu=main_nav'); ?></div>
     <div class="clear"></div>
   </header>
-  <div class="innards">
