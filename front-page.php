@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<!-- (large project image will be from a slideshow of 4 or 5 project images –
+changing every 5-7 seconds or so. The text in the box will come from the
+project-specific information for that project from its own project page) -->
 <div class="hero">
   <img src="<?php staengl_image('hero/crossing01.jpg'); ?>"></div>
 </div>
@@ -70,10 +73,8 @@
     <div class="posts">
 
 <?php if (have_posts()): ?>
-      <h3>blog posts</h3>
     <?php while (have_posts()): the_post(); ?>
 
-        <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
 
     <?php endwhile; ?>
