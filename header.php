@@ -15,10 +15,10 @@
 <body <?php body_class(); ?>>
 
   <header class="row">
-    <div class="large-4 columns">
-      <div id="little-logo">&nbsp;</div>
+    <div class="large-3 columns logo">
+      <div id="little-logo"><img src="<?php bloginfo('template_directory'); ?>/img/little-logo.png"></div>
     </div>
-    <div class="large-7 large-offset-1 columns">
+    <div class="large-9 columns">
       <?php wp_nav_menu( 'menu=main_nav'); ?>
     </div>
   </header>
