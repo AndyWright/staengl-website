@@ -71,20 +71,20 @@ function boiler_js()
 
     // HINT: comment outt he ones you don't use
     wp_enqueue_script('boiler-theme-js', get_template_directory_uri() . '/js/foundation/foundation.js', null, null, true);
-    wp_enqueue_script('boiler-alerts-js', get_template_directory_uri() . '/js/foundation/foundation.alerts.js', null, null, true);
-    wp_enqueue_script('boiler-clearing-js', get_template_directory_uri() . '/js/foundation/foundation.clearing.js', null, null, true);
-    wp_enqueue_script('boiler-cookie-js', get_template_directory_uri() . '/js/foundation/foundation.cookie.js', null, null, true);
-    wp_enqueue_script('boiler-dropdown-js', get_template_directory_uri() . '/js/foundation/foundation.dropdown.js', null, null, true);
-    wp_enqueue_script('boiler-forms-js', get_template_directory_uri() . '/js/foundation/foundation.forms.js', null, null, true);
-    wp_enqueue_script('boiler-interchange-js', get_template_directory_uri() . '/js/foundation/foundation.interchange.js', null, null, true);
-    wp_enqueue_script('boiler-joyride-js', get_template_directory_uri() . '/js/foundation/foundation.joyride.js', null, null, true);
-    wp_enqueue_script('boiler-magellan-js', get_template_directory_uri() . '/js/foundation/foundation.magellan.js', null, null, true);
-    wp_enqueue_script('boiler-orbit-js', get_template_directory_uri() . '/js/foundation/foundation.orbit.js', null, null, true);
-    wp_enqueue_script('boiler-placeholder-js', get_template_directory_uri() . '/js/foundation/foundation.placeholder.js', null, null, true);
-    wp_enqueue_script('boiler-reveal-js', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', null, null, true);
-    wp_enqueue_script('boiler-section-js', get_template_directory_uri() . '/js/foundation/foundation.section.js', null, null, true);
-    wp_enqueue_script('boiler-tooltips-js', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', null, null, true);
-    wp_enqueue_script('boiler-topbar-js', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', null, null, true);
+    // wp_enqueue_script('boiler-alerts-js', get_template_directory_uri() . '/js/foundation/foundation.alerts.js', null, null, true);
+    // wp_enqueue_script('boiler-clearing-js', get_template_directory_uri() . '/js/foundation/foundation.clearing.js', null, null, true);
+    // wp_enqueue_script('boiler-cookie-js', get_template_directory_uri() . '/js/foundation/foundation.cookie.js', null, null, true);
+    // wp_enqueue_script('boiler-dropdown-js', get_template_directory_uri() . '/js/foundation/foundation.dropdown.js', null, null, true);
+    // wp_enqueue_script('boiler-forms-js', get_template_directory_uri() . '/js/foundation/foundation.forms.js', null, null, true);
+    // wp_enqueue_script('boiler-interchange-js', get_template_directory_uri() . '/js/foundation/foundation.interchange.js', null, null, true);
+    // wp_enqueue_script('boiler-joyride-js', get_template_directory_uri() . '/js/foundation/foundation.joyride.js', null, null, true);
+    // wp_enqueue_script('boiler-magellan-js', get_template_directory_uri() . '/js/foundation/foundation.magellan.js', null, null, true);
+    // wp_enqueue_script('boiler-orbit-js', get_template_directory_uri() . '/js/foundation/foundation.orbit.js', null, null, true);
+    // wp_enqueue_script('boiler-placeholder-js', get_template_directory_uri() . '/js/foundation/foundation.placeholder.js', null, null, true);
+    // wp_enqueue_script('boiler-reveal-js', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', null, null, true);
+    // wp_enqueue_script('boiler-section-js', get_template_directory_uri() . '/js/foundation/foundation.section.js', null, null, true);
+    // wp_enqueue_script('boiler-tooltips-js', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', null, null, true);
+    // wp_enqueue_script('boiler-topbar-js', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', null, null, true);
     wp_enqueue_script('boiler-theme-js', get_template_directory_uri() . '/js/theme.js', null, null, true);
     if (is_singular('post')){
         wp_enqueue_script('comment-reply');
@@ -97,11 +97,11 @@ add_action('wp_enqueue_scripts', 'boiler_js');
 function boiler_header_icons()
 {
     $output = '';
-    $output .= '<link rel="apple-touch-icon" sizes="144x144" href="' . get_template_directory_uri() . '/images/apple-touch-icon-144x144.png" />' . "\n";
-    $output .= '<link rel="apple-touch-icon" sizes="114x114" href="' . get_template_directory_uri() . '/images/apple-touch-icon-114x114.png" />' . "\n";
-    $output .= '<link rel="apple-touch-icon" sizes="72x72" href="' . get_template_directory_uri() . '/images/apple-touch-icon-72x72.png" />' . "\n";
-    $output .= '<link rel="apple-touch-icon" href="' . get_template_directory_uri() . '/images/apple-touch-icon-57x57.png" />' . "\n";
-    $output .= '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/favicon.ico" />' . "\n";
+    // $output .= '<link rel="apple-touch-icon" sizes="144x144" href="' . get_template_directory_uri() . '/images/apple-touch-icon-144x144.png" />' . "\n";
+    // $output .= '<link rel="apple-touch-icon" sizes="114x114" href="' . get_template_directory_uri() . '/images/apple-touch-icon-114x114.png" />' . "\n";
+    // $output .= '<link rel="apple-touch-icon" sizes="72x72" href="' . get_template_directory_uri() . '/images/apple-touch-icon-72x72.png" />' . "\n";
+    // $output .= '<link rel="apple-touch-icon" href="' . get_template_directory_uri() . '/images/apple-touch-icon-57x57.png" />' . "\n";
+    $output .= '<link rel="icon" type="image/png" href="' . get_template_directory_uri() . '/staengl.png" />' . "\n";
     echo $output;
 }
 add_action('wp_head', 'boiler_header_icons');

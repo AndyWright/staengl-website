@@ -13,9 +13,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-
   <header>
-    <div id="little-logo">&nbsp;</div>
+<?php if (is_front_page()) { ?>
+    <div id="big-logo">&nbsp;</div>
+<?php } else { ?>
+    <a href="/"><div id="little-logo">&nbsp;</div></a>
+<?php } ?>
     <div class="menu"><?php wp_nav_menu( 'menu=main_nav'); ?></div>
     <div class="clear"></div>
   </header>

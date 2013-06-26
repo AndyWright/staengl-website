@@ -31,20 +31,28 @@ header {
   margin-top: 22px;
 }
 
-#little-logo {
+#little-logo, #big-logo {
   background-image: url('../img/little-logo.png');
   background-repeat: no-repeat;
-  height: 69px;
-  width: 200px;
+  height: 120px;
+  width: 320px;
   margin: 0 0 15px 0;
   padding: 0;
   float: left;
 }
 
+#little-logo {
+  background-image: url('../img/little-logo.png');
+}
+
+#big-logo {
+  background-image: url('../img/big-boi.jpg');
+}
+
 .menu {
   // padding: 43px 0 0 0;
   padding-top: 22px;
-  margin-left: 151px;
+  // margin-left: 151px;
   float: left;
 }
 

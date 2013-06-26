@@ -1068,30 +1068,39 @@ header {
 }
 
 /* line 34, ../scss/_styles.scss */
-#little-logo {
+#little-logo, #big-logo {
   background-image: url("../img/little-logo.png");
   background-repeat: no-repeat;
-  height: 69px;
-  width: 200px;
+  height: 120px;
+  width: 320px;
   margin: 0 0 15px 0;
   padding: 0;
   float: left;
 }
 
 /* line 44, ../scss/_styles.scss */
+#little-logo {
+  background-image: url("../img/little-logo.png");
+}
+
+/* line 48, ../scss/_styles.scss */
+#big-logo {
+  background-image: url("../img/big-boi.jpg");
+}
+
+/* line 52, ../scss/_styles.scss */
 .menu {
   padding-top: 22px;
-  margin-left: 151px;
   float: left;
 }
 
-/* line 51, ../scss/_styles.scss */
+/* line 59, ../scss/_styles.scss */
 #menu-main {
   list-style: none;
   float: left;
   margin: 0;
 }
-/* line 56, ../scss/_styles.scss */
+/* line 64, ../scss/_styles.scss */
 #menu-main li {
   float: left;
   margin-left: 30px;
@@ -1100,21 +1109,21 @@ header {
   font-size: 1.25em;
   font-weight: 300;
 }
-/* line 64, ../scss/_styles.scss */
+/* line 72, ../scss/_styles.scss */
 #menu-main li.current_page_item {
   border-bottom: 3px solid #5fa73a;
 }
-/* line 68, ../scss/_styles.scss */
+/* line 76, ../scss/_styles.scss */
 #menu-main a:link, #menu-main a:visited, #menu-main a:hover, #menu-main a:active {
   color: #636363;
   text-decoration: none;
 }
-/* line 72, ../scss/_styles.scss */
+/* line 80, ../scss/_styles.scss */
 #menu-main a:hover {
   color: #292928;
 }
 
-/* line 78, ../scss/_styles.scss */
+/* line 86, ../scss/_styles.scss */
 div.innards {
   background-color: #fff;
   min-height: 600px;
@@ -1122,16 +1131,16 @@ div.innards {
   padding-bottom: 22px;
 }
 
-/* line 87, ../scss/_styles.scss */
+/* line 95, ../scss/_styles.scss */
 .posts ul {
   list-style: none;
 }
-/* line 90, ../scss/_styles.scss */
+/* line 98, ../scss/_styles.scss */
 .posts li {
   margin-bottom: 6px;
 }
 
-/* line 93, ../scss/_styles.scss */
+/* line 101, ../scss/_styles.scss */
 footer {
   background-color: #5fa73a;
   background-image: url("../img/footer-bg.png");
@@ -1143,7 +1152,7 @@ footer {
   font-size: 0.75em;
 }
 
-/* line 104, ../scss/_styles.scss */
+/* line 112, ../scss/_styles.scss */
 .copyright {
   font-size: 0.75em;
 }
