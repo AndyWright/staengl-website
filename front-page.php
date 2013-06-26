@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<div class="row inner-content">
+<div role="main">
 
   <h1>front-page.php</h1>
 
-  <div class="row">
-    <div class="large-4 columns posts">
+  <div class="">
+    <div class="posts">
 
 <?php if (have_posts()): ?>
       <h3>blog posts</h3>

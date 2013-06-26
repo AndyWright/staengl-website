@@ -14,11 +14,9 @@
 
 <body <?php body_class(); ?>>
 
-  <header class="row">
-    <div class="large-3 columns logo">
-      <div id="little-logo"><img src="<?php bloginfo('template_directory'); ?>/img/little-logo.png"></div>
-    </div>
-    <div class="large-9 columns">
-      <?php wp_nav_menu( 'menu=main_nav'); ?>
-    </div>
+  <header>
+    <div id="little-logo">&nbsp;</div>
+    <div class="menu"><?php wp_nav_menu( 'menu=main_nav'); ?></div>
+    <div class="clear"></div>
   </header>
+  <div class="innards">

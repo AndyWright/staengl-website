@@ -2,45 +2,57 @@
 
 html, body {
   background-color: rgb(245,245,245);
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   color: $medium-greyish;
-  // background-color: $limon;
 }
 
-// // // // // // //
-// header stuff
-// // // // // // //
-header.row {
+@mixin container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+header, footer, div.innards {
+  @include container;
+}
+
+.clear {
+  @include clearfix;
+}
+
+header {
   border-bottom: solid 1px #d9d9d9;
-  margin-top: 11px;
+  margin-top: 22px;
 }
 
 #little-logo {
-  // background-image: url('../img/little-logo.png');
+  background-image: url('../img/little-logo.png');
   background-repeat: no-repeat;
-  background-position: top right;
   height: 69px;
-  margin: 18px 0 0 18px;
-  text-align: right;
-  background-color: $limon;
+  width: 200px;
+  margin: 0 0 15px 0;
+  padding: 0;
+  float: left;
 }
 
-.logo {
-  background-color: $peachie;
-  padding: 0;
+.menu {
+  // padding: 43px 0 0 0;
+  padding-top: 22px;
+  margin-left: 151px;
+  float: left;
 }
 
 #menu-main {
-  width: 100%;
-  // float: left;
-  margin: 0; // 0 3em 0;
-  padding: 0;
   list-style: none;
-  margin-top: 44px;
-  text-align: center;
+  // text-align: center;
+  float: left;
+  margin: 0;
   li {
     float: left;
     margin-left: 30px;
@@ -55,6 +67,7 @@ header.row {
 
   a:link, a:visited, a:hover, a:active {
     color: $medium-greyish;
+    text-decoration: none;
   }
   a:hover {
     // font-weight: 400;
@@ -62,11 +75,12 @@ header.row {
   }
 }
 
-
-.inner-content, .home-content {
+div.innards {
   background-color: #fff;
   min-height: 600px;
- }
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
 
 .posts {
   // padding-left: 6px;
@@ -76,7 +90,7 @@ header.row {
   li { margin-bottom: 6px; }
 }
 
-footer.row {
+footer {
   background-color: $footer-green;
   background-image: url('../img/footer-bg.png');
   background-repeat: no-repeat;
@@ -84,6 +98,7 @@ footer.row {
   padding: 30px;
   color: #fff;
   text-align: center;
+  font-size: emCalc(12px);
 }
 
 .copyright {
