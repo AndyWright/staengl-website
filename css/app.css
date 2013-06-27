@@ -1124,7 +1124,7 @@ select {
 
 /* line 3, ../scss/_styles.scss */
 html, body {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
 }
@@ -1196,13 +1196,23 @@ header.front-page .logo {
   background-image: none;
 }
 
-/* line 71, ../scss/_styles.scss */
+/* line 72, ../scss/_styles.scss */
+#menu-main a:link, #menu-main a:visited, #menu-main a:hover, #menu-main a:active, .titles a:link, .titles a:visited, .titles a:hover, .titles a:active {
+  color: #636363;
+  text-decoration: none;
+}
+/* line 76, ../scss/_styles.scss */
+#menu-main a:hover, .titles a:hover {
+  color: #5fa73a;
+}
+
+/* line 82, ../scss/_styles.scss */
 #menu-main {
   list-style: none;
   float: left;
   margin: 0;
 }
-/* line 76, ../scss/_styles.scss */
+/* line 87, ../scss/_styles.scss */
 #menu-main li {
   float: left;
   margin-left: 30px;
@@ -1211,21 +1221,21 @@ header.front-page .logo {
   font-size: 1.25em;
   font-weight: 300;
 }
-/* line 84, ../scss/_styles.scss */
+/* line 95, ../scss/_styles.scss */
 #menu-main li.current_page_item {
   border-bottom: 3px solid #5fa73a;
 }
-/* line 88, ../scss/_styles.scss */
+/* line 99, ../scss/_styles.scss */
 #menu-main a:link, #menu-main a:visited, #menu-main a:hover, #menu-main a:active {
   color: #636363;
   text-decoration: none;
 }
-/* line 92, ../scss/_styles.scss */
+/* line 103, ../scss/_styles.scss */
 #menu-main a:hover {
   color: #5fa73a;
 }
 
-/* line 98, ../scss/_styles.scss */
+/* line 109, ../scss/_styles.scss */
 div.innards {
   *zoom: 1;
   border-bottom: solid 1px #d9d9d9;
@@ -1244,18 +1254,18 @@ div.innards:after {
   clear: both;
 }
 
-/* line 107, ../scss/_styles.scss */
+/* line 118, ../scss/_styles.scss */
 .innards.bottomless {
   border-bottom: 0;
 }
 
-/* line 109, ../scss/_styles.scss */
+/* line 120, ../scss/_styles.scss */
 .titles, .copy, .badges {
   margin: 0;
   padding: 0;
 }
 
-/* line 114, ../scss/_styles.scss */
+/* line 125, ../scss/_styles.scss */
 .one, .two, .three {
   border-left: solid 1px #d9d9d9;
   font-weight: 300;
@@ -1264,77 +1274,77 @@ div.innards:after {
   float: left;
   width: 320px;
 }
-/* line 121, ../scss/_styles.scss */
+/* line 132, ../scss/_styles.scss */
 .one p, .two p, .three p {
   margin: 25px;
 }
 
-/* line 123, ../scss/_styles.scss */
+/* line 134, ../scss/_styles.scss */
 .three {
   border-right: solid 1px #d9d9d9;
   width: 317px;
 }
 
-/* line 127, ../scss/_styles.scss */
+/* line 138, ../scss/_styles.scss */
 .titles {
   margin-top: 150px;
 }
-/* line 129, ../scss/_styles.scss */
+/* line 140, ../scss/_styles.scss */
 .titles .one, .titles .two, .titles .three {
   border-width: 3px;
   font-weight: 400;
   padding-left: 25px;
 }
-/* line 135, ../scss/_styles.scss */
+/* line 146, ../scss/_styles.scss */
 .titles .one, .titles .two {
   color: #5fa73a;
 }
-/* line 138, ../scss/_styles.scss */
+/* line 149, ../scss/_styles.scss */
 .titles .three {
   width: 319px;
 }
 
-/* line 142, ../scss/_styles.scss */
+/* line 153, ../scss/_styles.scss */
 .copy, .badges {
   margin-left: 1px;
 }
 
-/* line 146, ../scss/_styles.scss */
+/* line 157, ../scss/_styles.scss */
 .copy .one, .copy .two, .copy .three {
   font-size: 0.8125em;
   height: 555px;
   padding-top: 22px;
 }
-/* line 152, ../scss/_styles.scss */
+/* line 163, ../scss/_styles.scss */
 .copy .one, .copy .two {
   background-position: bottom left;
   background-repeat: no-repeat;
 }
-/* line 156, ../scss/_styles.scss */
+/* line 167, ../scss/_styles.scss */
 .copy .one {
   background-image: url("../img/what.png");
 }
-/* line 157, ../scss/_styles.scss */
+/* line 168, ../scss/_styles.scss */
 .copy .two {
   background-image: url("../img/philosophy.png");
 }
 
-/* line 160, ../scss/_styles.scss */
+/* line 171, ../scss/_styles.scss */
 .badges .one, .badges .two, .badges .three {
   height: 200px;
   padding: 50px 0 0 55px;
 }
 
-/* line 168, ../scss/_styles.scss */
+/* line 179, ../scss/_styles.scss */
 .posts ul {
   list-style: none;
 }
-/* line 171, ../scss/_styles.scss */
+/* line 182, ../scss/_styles.scss */
 .posts li {
   margin-bottom: 6px;
 }
 
-/* line 174, ../scss/_styles.scss */
+/* line 185, ../scss/_styles.scss */
 footer {
   background-color: #5fa73a;
   background-image: url("../img/footer-bg.png");
@@ -1346,41 +1356,41 @@ footer {
   font-size: 0.75em;
 }
 
-/* line 185, ../scss/_styles.scss */
+/* line 196, ../scss/_styles.scss */
 .copyright {
   font-size: 0.75em;
 }
 
-/* line 191, ../scss/_styles.scss */
+/* line 202, ../scss/_styles.scss */
 .services h1, .company h1, .contact h1 {
   margin-bottom: 66px;
 }
 
-/* line 195, ../scss/_styles.scss */
+/* line 206, ../scss/_styles.scss */
 .services, .company {
   margin: 123px 44px;
 }
 
-/* line 199, ../scss/_styles.scss */
+/* line 210, ../scss/_styles.scss */
 .company {
   margin-bottom: 22px;
 }
 
-/* line 202, ../scss/_styles.scss */
+/* line 213, ../scss/_styles.scss */
 .company-links {
   margin: 0 44px 111px 44px;
   text-align: center;
 }
-/* line 205, ../scss/_styles.scss */
+/* line 216, ../scss/_styles.scss */
 .company-links img {
   margin: 11px 44px;
 }
-/* line 206, ../scss/_styles.scss */
+/* line 217, ../scss/_styles.scss */
 .company-links a {
   text-decoration: none;
 }
 
-/* line 210, ../scss/_styles.scss */
+/* line 221, ../scss/_styles.scss */
 .contact {
   line-height: 1.5em;
   margin: 123px 0 188px 88px;

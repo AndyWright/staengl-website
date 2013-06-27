@@ -1,6 +1,8 @@
+<?php
 /*
-Template Name: Company Page
+ * Template Name: Company Page
  */
+?>
 
 <?php get_header(); ?>
 <div class="innards">

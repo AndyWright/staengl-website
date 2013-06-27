@@ -11,7 +11,8 @@ project-specific information for that project from its own project page) -->
   <div class="titles">
     <div class="one what">What We Do</div>
     <div class="two philosophy">Our Philosophy</div>
-    <div class="three latest-news">The Latest News</div>
+    <div class="three latest-news">
+      <a href="/news">The Latest News</a></div>
     <div class="clear"></div>
   </div>
 </div>
