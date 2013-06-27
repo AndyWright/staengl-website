@@ -1,0 +1,14 @@
+compass.rb
+Gemfile*
+Guardfile
+README.mdown
+Rakefile
+assets/.sass-cache*
+assets/src
+*.haml
+inc/*.haml
+tmp/*.php
+tmp/
+.DS_Store
+.git*
+*.sh

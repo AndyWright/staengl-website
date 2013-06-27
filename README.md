@@ -3,6 +3,8 @@ staengl-website
 
 wordpress website for staengl engineering
 
+made some good use of [this github repo](https://github.com/wilhelser/WordPress-Scripts)
+
 TODO:
 
 * set up wiki and document workflow
