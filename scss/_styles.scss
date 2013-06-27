@@ -9,6 +9,7 @@ html, body {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  line-height: 1.5em;
   color: $medium-greyish;
 }
 
@@ -90,7 +91,7 @@ header.front-page {
   }
   a:hover {
     // font-weight: 400;
-    color: $darker-greyish;
+    color: $footer-green;
   }
 }
 
@@ -114,7 +115,7 @@ div.innards {
   border-left: solid 1px $borderline;
   font-weight: 300;
   font-size: emCalc(20px);
-  line-height: emCalc(20px);
+  line-height: emCalc(24px);
   float: left;
   width: 320px;
   p { margin: 25px; }
@@ -144,7 +145,8 @@ div.innards {
 .copy {
   .one, .two, .three {
     font-size: emCalc(13px);
-    height: 515px;
+    height: 555px;
+    padding-top: 22px;
     // background-color: $peachie;
   }
   .one, .two {
@@ -182,5 +184,33 @@ footer {
 
 .copyright {
   font-size: emCalc(12px);
+}
+
+// special pages
+.services, .company, .contact {
+  h1 { margin-bottom: 66px; }
+}
+
+
+.services, .company {
+  margin:123px 44px;
+}
+
+.company {
+  margin-bottom: 22px;
+}
+.company-links {
+  margin: 0 44px 111px 44px;
+  text-align: center;
+  img { margin: 11px 44px; }
+  a { text-decoration: none; }
+}
+
+
+.contact {
+  // font-size: 1.25em;
+  line-height: 1.5em;
+  margin: 123px 0 188px 88px;
+
 }
 
