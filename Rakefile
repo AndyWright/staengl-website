@@ -1,46 +1,60 @@
 #
 # tasks for deploying and migrating databases
 #
-ssh_user          = ""
-remote_root       = "" #path to your WordPress installation
+ssh_user           = ""
+remote_root        = "" #path to your WordPress installation
 remote_theme       = ""  #Path to your theme directory
-remote_plugins       = "" # Path to your plugins directory
-remote_mu       = "" # Path to your MU plugins directory if you're using it
-remote_vhost             = "" # example.com
-remote_db_user     = ""
-remote_db_password = ""
-remote_db_name     = ""
-remote_db_host     = ""
+remote_plugins     = "" # Path to your plugins directory
+remote_mu          = "" # Path to your MU plugins directory if you're using it
+remote_vhost       = "staengl.engine-earring.com" # example.com
+remote_db_user     = "staenglengineear"
+remote_db_password = "iK74^xmH"
+remote_db_name     = "staengl_engine_earring_c"
+remote_db_host     = "mysql.staengl.engine-earring.com"
+remote_prefix      = 'wp\_gxiyhv\_'  # wp_ - must be escaped for sed
 
-local_db_user     = ""
-local_db_password = ""
-local_db_name     = ""
-local_db_host     = ""
-local_vhost             = ""
-local_root       = ""
+local_vhost       = "staengl.dev"
+local_db_user     = "wp"
+local_db_password = "meeS00"
+local_db_name     = "staengl"
+local_db_host     = "127.0.0.1"
+local_prefix      = 'wp\_'  # wp_ - must be escaped for sed
+
+local_root        = ""
 local_theme       = ""
-local_plugins       = ""
-local_mu       = ""
+local_plugins     = ""
+local_mu          = ""
 
 namespace :db do
+
   desc "Pull DB"
   task :pull do
-    #TODO check if the directory exists
-    Dir.mkdir("tmp")
-    system( "mysqldump --add-drop-table  -h #{remote_db_host} -u #{remote_db_user} -p#{remote_db_password} #{remote_db_name} > tmp/dump.sql")
-    system 'sed -i "s/www.#{remote_vhost}/#{local_vhost}/g" tmp/dump.sql'
-    system 'sed -i "s/#{remote_vhost}/#{local_vhost}/g" tmp/dump.sql'
-    system "mysql -h #{local_db_host} -u #{local_db_user} -p#{local_db_password} #{local_db_name}  < tmp/dump.sql"
-    Dir.delete("tmp")
+    Dir.mkdir("tmp") unless Dir.exists?("tmp")
+    [
+      "mysqldump --add-drop-table  -h #{remote_db_host} -u #{remote_db_user} -p#{remote_db_password} #{remote_db_name} > tmp/remote_dump.sql",
+      'sed -i bk1 "' + "s/www.#{remote_vhost}/#{local_vhost}/g" + '" tmp/remote_dump.sql',
+      'sed -i bk2 "' + "s/#{remote_vhost}/#{local_vhost}/g" + '" tmp/remote_dump.sql',
+      'sed -i bk3 "' + "s/#{remote_prefix}/#{local_prefix}/g" + '" tmp/remote_dump.sql',
+      "mysql -h #{local_db_host} -u #{local_db_user} -p#{local_db_password} #{local_db_name}  < tmp/remote_dump.sql"
+    ].each do |cmd|
+      puts cmd
+      system cmd
+    end
   end
+
   desc "Push DB"
   task :push do
-    Dir.mkdir("tmp")
-    system "mysqldump --add-drop-table  -h #{local_db_host} -u #{local_db_user} -p#{local_db_password} #{local_db_name} > tmp/dump.sql"
-    system 'sed -i "s/www.#{local_vhost}/#{remote_vhost}/g" tmp/dump.sql'
-    system 'sed -i "s/#{local_vhost}/#{remote_vhost}/g" tmp/dump.sql'
-    system "mysql -h #{remote_db_host} -u #{remote_db_user} -p#{remote_db_password} #{remote_db_name}  < tmp/dump.sql"
-    Dir.delete("tmp")
+    Dir.mkdir("tmp") unless Dir.exists?("tmp")
+    [
+      "mysqldump --add-drop-table  -h #{local_db_host} -u #{local_db_user} -p#{local_db_password} #{local_db_name} > tmp/local_dump.sql",
+      'sed -i bk1 "' + "s/www.#{local_vhost}/#{remote_vhost}/g" + '" tmp/local_dump.sql',
+      'sed -i bk2 "' + "s/#{local_vhost}/#{remote_vhost}/g" + '" tmp/local_dump.sql',
+      'sed -i bk3 "' + "s/#{local_prefix}/#{remote_prefix}/g" + '" tmp/local_dump.sql',
+      # "mysql -h #{remote_db_host} -u #{remote_db_user} -p#{remote_db_password} #{remote_db_name}  < tmp/local_dump.sql"
+    ].each do |cmd|
+      puts cmd
+      system cmd
+    end
   end
 end
 

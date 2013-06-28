@@ -34,9 +34,7 @@ div.hero {
   // }
 }
 
-.clear {
-  @include clearfix;
-}
+.clear { @include clearfix; }
 
 header {
   border-bottom: solid 1px $borderline;
