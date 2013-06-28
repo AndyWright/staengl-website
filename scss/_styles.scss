@@ -216,6 +216,25 @@ div.innards {
 }
 
 
+.news-item {
+  font-weight: 300;
+  margin-bottom: 44px;
+  .date {
+    font-size: emCalc(14px);
+    line-height: emCalc(24px);
+    // color: $lighter-greyish;
+    color: $medium-greyish;
+  }
+  .title {
+    font-size: emCalc(22px);
+    // line-height: emCalc(24px) !important;
+    font-weight: 400;
+  }
+  .content {
+
+  }
+}
+
 .posts {
   // padding-left: 6px;
   ul {
