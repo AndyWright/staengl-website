@@ -50,7 +50,7 @@ namespace :db do
       'sed -i bk1 "' + "s/www.#{local_vhost}/#{remote_vhost}/g" + '" tmp/local_dump.sql',
       'sed -i bk2 "' + "s/#{local_vhost}/#{remote_vhost}/g" + '" tmp/local_dump.sql',
       'sed -i bk3 "' + "s/#{local_prefix}/#{remote_prefix}/g" + '" tmp/local_dump.sql',
-      # "mysql -h #{remote_db_host} -u #{remote_db_user} -p#{remote_db_password} #{remote_db_name}  < tmp/local_dump.sql"
+      "mysql -h #{remote_db_host} -u #{remote_db_user} -p#{remote_db_password} #{remote_db_name}  < tmp/local_dump.sql"
     ].each do |cmd|
       puts cmd
       system cmd

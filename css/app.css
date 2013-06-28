@@ -1362,12 +1362,12 @@ footer {
 }
 
 /* line 200, ../scss/_styles.scss */
-.services h1, .company h1, .contact h1 {
+.services h1, .company h1, .contact h1, .news h1 {
   margin-bottom: 66px;
 }
 
 /* line 204, ../scss/_styles.scss */
-.services, .company {
+.services, .company, .news {
   margin: 123px 44px;
 }
 

@@ -9,6 +9,7 @@ TODO:
 
 * set up wiki and document workflow
 * set up hosting
+* make rsync deploy with css and js compression
 
 ###theme
 the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)

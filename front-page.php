@@ -41,7 +41,16 @@ project-specific information for that project from its own project page) -->
       elegance, inspire visitors and occupants, and maximize economy.</p>
     </div>
     <div class="three">
-      <p>bunch of text goes here</p>
+      <ul>
+      <?php $the_query = new WP_Query( 'showposts=4' ); ?>
+      <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+      <li>
+        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+      </li>
+      <?php endwhile;?>
+      </ul>
+
+
 <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
 

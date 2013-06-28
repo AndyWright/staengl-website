@@ -1,7 +1,6 @@
 <?php get_header(); ?>
-
-<h1>single.php</h1>
-
+<div class="innards">
+  <div class="news">
 <?php if (have_posts()): ?>
 
     <?php while (have_posts()): the_post(); ?>
@@ -28,7 +27,6 @@
     <?php get_template_part('notfound'); ?>
 
 <?php endif; ?>
-
-<?php get_sidebar(); ?>
-
+  </div>
+</div> <!-- class="innards" -->
 <?php get_footer(); ?>
