@@ -45,7 +45,7 @@ project-specific information for that project from its own project page) -->
       <?php $the_query = new WP_Query( 'showposts=4' ); ?>
       <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
       <li>
-        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+        <?php the_title(); ?>
       </li>
       <?php endwhile;?>
       </ul>
