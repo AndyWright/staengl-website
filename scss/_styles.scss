@@ -66,7 +66,7 @@ header.front-page {
   }
 }
 
-#menu-main, .titles {
+#menu-main, .titles, .title {
   a:link, a:visited, a:hover, a:active {
     color: $medium-greyish;
     text-decoration: none;
@@ -115,7 +115,7 @@ div.innards {
 
 .innards.bottomless { border-bottom: 0; }
 
-.titles, .copy, .badges {
+.titles, .copy, .front-news, .badges {
   margin: 0;
   padding: 0;
 }
@@ -171,6 +171,50 @@ div.innards {
     padding: 50px 0 0 55px;
   }
 }
+
+.front-news {
+  min-height: 444px;
+  // margin-top: 0;
+}
+.more-news {
+  margin: 25px;
+}
+
+.front-news-item {
+  margin: 25px 25px 5px 25px;
+  display: inline-block;
+  .pic {
+    margin: 0;
+    width: 80px;
+    float: left;
+  }
+  .deets {
+    margin: 0;
+    width: 175px;
+    display: inline-block;
+    float: left;
+  }
+  .title, .date { margin: 0 0 0 15px; }
+  .title {
+    font-size: emCalc(16px);
+    line-height: emCalc(18px);
+    font-weight: 400;
+  }
+  .date {
+    font-size: emCalc(14px);
+    line-height: emCalc(20px);
+    font-weight: 300;
+    // color: $lighter-greyish;
+    color: $medium-greyish;
+  }
+}
+
+.flat-green-button {
+  @include button-base;
+  @include button-size;
+  @include button-style($footer-green, 3px, false);
+}
+
 
 .posts {
   // padding-left: 6px;

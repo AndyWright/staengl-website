@@ -41,14 +41,27 @@ project-specific information for that project from its own project page) -->
       elegance, inspire visitors and occupants, and maximize economy.</p>
     </div>
     <div class="three">
-      <ul>
+      <div class="front-news">
       <?php $the_query = new WP_Query( 'showposts=4' ); ?>
       <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-      <li>
-        <?php the_title(); ?>
-      </li>
+
+        <div class="front-news-item">
+          <div class="pic">
+            <a href="<?php the_permalink() ?>">
+              <img src="<?php staengl_image('80x60.gif'); ?>">
+            </a>
+          </div>
+          <div class="deets">
+            <div class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
+            <div class="date"><?php the_date('Y M d'); ?></div>
+          </div>
+        </div>
+        <div class="clear"></div>
       <?php endwhile;?>
-      </ul>
+      </div>
+      <div class="more-news">
+        <a href="../news" class="flat-green-button">More</a>
+      </div>
 
 
 <?php if (have_posts()): ?>
