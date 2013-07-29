@@ -11,6 +11,20 @@ TODO:
 * set up hosting
 * make rsync deploy with css and js compression
 
+* home page
+  * substitute Solar Panel image with cropped one from Crossings
+  * replace integral group logo with Architecture 2030 Challenge (input text in jumpchart)
+* company page
+  * Galen headshot and bio
+  * logos (done)
+* services page
+  * Revit3D image
+  * Longridge model image
+
+
+###content
+is in
+
 ###theme
 the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)
 
@@ -20,6 +34,9 @@ there are instructions there for setting up local development environment.
 $ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/staengl-website
 ```
 
+### site urls
+[local development](http://staengl.dev/company/)
+[staging](http://staengl.engine-earring.com/company/)
 
 ###links to check out
 * http://theme.fm/2011/08/tutorial-deploying-wordpress-with-capistrano-2082/

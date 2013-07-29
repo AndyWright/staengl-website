@@ -107,7 +107,7 @@ project-specific information for that project from its own project page) -->
     </div>
     <div class="three">
       <span data-tooltip class="has-tip tip-top" title="Staengl Engineering is proud to have adopted the Architecture 2030 Challenge. The goal of the 2030 Challenge is to achieve a dramatic reduction in the climate-change-causing greenhouse gas (GHG) emissions of the Building Sector by changing the way buildings and developments are planned, designed and constructed.">
-        <img src="<?php staengl_image('integral.jpg'); ?>">
+        <img src="<?php staengl_image('Architecture2030Challenge.jpg'); ?>">
       </span>
     </div>
     <div class="clear"></div>
