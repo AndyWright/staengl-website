@@ -10,12 +10,14 @@ TODO:
 * set up wiki and document workflow
 * set up hosting
 * make rsync deploy with css and js compression
+* 404, 500, error pages
 
 * home page
-  * substitute Solar Panel image with cropped one from Crossings
-  * replace integral group logo with Architecture 2030 Challenge (input text in jumpchart)
+  * make Hero image rotator work
+  * substitute Solar Panel image with cropped one from Crossings (ip)
+  * replace integral group logo with Architecture 2030 Challenge (done)
 * company page
-  * Galen headshot and bio
+  * Galen headshot and bio (ip)
   * logos (done)
 * services page
   * Revit3D image
@@ -23,7 +25,7 @@ TODO:
 
 
 ###content
-is in
+is in [jumpchart](https://engineearring.jumpchart.com/site/view/131622/)
 
 ###theme
 the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)
