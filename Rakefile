@@ -1,9 +1,9 @@
 #
 # tasks for deploying and migrating databases
 #
-ssh_user           = ""
-remote_root        = "" #path to your WordPress installation
-remote_theme       = ""  #Path to your theme directory
+ssh_alias          = "jimnist"  # jimnist is
+remote_root        = "/home/jimnist/staengl.engine-earring.com" #path to your WordPress installation
+remote_theme       = File.join "#{remote_root}", "wp-content/themes/staengl-website"  #Path to your theme directory
 remote_plugins     = "" # Path to your plugins directory
 remote_mu          = "" # Path to your MU plugins directory if you're using it
 remote_vhost       = "staengl.engine-earring.com" # example.com
@@ -20,10 +20,26 @@ local_db_name     = "staengl"
 local_db_host     = "127.0.0.1"
 local_prefix      = 'wp\_'  # wp_ - must be escaped for sed
 
-local_root        = ""
-local_theme       = ""
+local_root        = "/Users/jim/wrk/staengl/staengl-website"
+local_theme       = local_root
 local_plugins     = ""
 local_mu          = ""
+
+namespace :theme do
+  desc "Pull Theme"
+  task :pull do
+    cmd = "rsync -avz  #{ssh_alias}:#{remote_theme}/  #{local_theme}/"
+    puts cmd
+    system cmd
+  end
+
+  desc "Push Theme"
+  task :push do
+    cmd = "rsync -avz  --exclude-from 'exclude.txt' --delete #{local_theme}/ #{ssh_alias}:#{remote_theme}/"
+    puts cmd
+    system cmd
+  end
+end
 
 namespace :db do
 
@@ -61,39 +77,28 @@ end
 namespace :uploads do
   desc "Pull Uploads"
   task :pull do
-    system( "rsync -avz  #{ssh_user}:#{remote_root}/wp-content/uploads/  #{local_root}/wp-content/uploads/")
+    system( "rsync -avz  #{ssh_alias}:#{remote_root}/wp-content/uploads/  #{local_root}/wp-content/uploads/")
   end
   desc "Push Uploads"
   task :push do
-    system( "rsync -avz  #{local_root}/wp-content/uploads/ #{ssh_user}:#{remote_root}/wp-content/uploads/ ")
-  end
-end
-
-namespace :theme do
-  desc "Pull Theme"
-  task :pull do
-    system( "rsync -avz  #{ssh_user}:#{remote_theme}/  #{local_theme}/")
-  end
-  desc "Push Theme"
-  task :push do
-    system( "rsync -avz  --exclude-from 'exclude.txt' --delete #{local_theme}/ #{ssh_user}:#{remote_theme}/")
+    system( "rsync -avz  #{local_root}/wp-content/uploads/ #{ssh_alias}:#{remote_root}/wp-content/uploads/ ")
   end
 end
 
 namespace :plugins do
   desc "Push Plugins"
   task :push do
-    system( "rsync -avz #{local_plugins}/ #{ssh_user}:#{remote_plugins}/")
+    system( "rsync -avz #{local_plugins}/ #{ssh_alias}:#{remote_plugins}/")
   end
   desc "Pull Plugins"
   task :pull do
-    system( "rsync -avz #{ssh_user}:#{remote_plugins}/ #{local_plugins}/")
+    system( "rsync -avz #{ssh_alias}:#{remote_plugins}/ #{local_plugins}/")
   end
 end
 
 namespace :mu do
   desc "Push MU Plugin"
   task :push do
-    system( "rsync -avz  --exclude-from 'exclude.txt' --delete #{local_mu}/ #{ssh_user}:#{remote_mu}/")
+    system( "rsync -avz  --exclude-from 'exclude.txt' --delete #{local_mu}/ #{ssh_alias}:#{remote_mu}/")
   end
 end
