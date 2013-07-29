@@ -14,14 +14,14 @@ TODO:
 
 * home page
   * make Hero image rotator work
-  * substitute Solar Panel image with cropped one from Crossings (ip)
+  * substitute Solar Panel image with cropped one from Crossings (done)
   * replace integral group logo with Architecture 2030 Challenge (done)
 * company page
-  * Galen headshot and bio (ip)
+  * Galen headshot and bio (done)
   * logos (done)
 * services page
-  * Revit3D image
-  * Longridge model image
+  * Revit3D image (done)
+  * Longridge model image (need image)
 
 
 ###content

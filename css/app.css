@@ -1743,7 +1743,12 @@ footer {
   text-decoration: none;
 }
 
-/* line 282, ../scss/_styles.scss */
+/* line 280, ../scss/_styles.scss */
+.headshot {
+  margin-top: 22px;
+}
+
+/* line 285, ../scss/_styles.scss */
 .contact {
   line-height: 1.5em;
   margin: 123px 0 188px 88px;
