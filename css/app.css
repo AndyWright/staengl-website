@@ -1605,7 +1605,7 @@ div.innards:after {
 
 /* line 183, ../scss/_styles.scss */
 .front-news-item {
-  margin: 25px 25px 5px 25px;
+  margin: 25px 0 5px 25px;
   display: inline-block;
 }
 /* line 186, ../scss/_styles.scss */
@@ -1617,7 +1617,7 @@ div.innards:after {
 /* line 191, ../scss/_styles.scss */
 .front-news-item .deets {
   margin: 0;
-  width: 175px;
+  width: 222px;
   display: inline-block;
   float: left;
 }

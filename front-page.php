@@ -42,7 +42,7 @@ project-specific information for that project from its own project page) -->
     </div>
     <div class="three">
       <div class="front-news">
-      <?php $the_query = new WP_Query( 'showposts=4' ); ?>
+      <?php $the_query = new WP_Query( 'showposts=5' ); ?>
       <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 
         <div class="front-news-item">
