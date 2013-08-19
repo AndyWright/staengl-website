@@ -1729,27 +1729,42 @@ footer {
 .company {
   margin-bottom: 22px;
 }
-
 /* line 273, ../scss/_styles.scss */
+.company .copy {
+  float: left;
+  width: 525px;
+}
+/* line 277, ../scss/_styles.scss */
+.company .headshot {
+  margin: 0 33px 0 33px;
+  float: left;
+  width: 220px;
+}
+/* line 283, ../scss/_styles.scss */
+.company .clipboard {
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+/* line 286, ../scss/_styles.scss */
+.company .clipboard img {
+  margin: 0 44px 0 45px;
+}
+
+/* line 290, ../scss/_styles.scss */
 .company-links {
   margin: 0 44px 111px 44px;
   text-align: center;
 }
-/* line 276, ../scss/_styles.scss */
+/* line 293, ../scss/_styles.scss */
 .company-links img {
   margin: 11px 44px;
 }
-/* line 277, ../scss/_styles.scss */
+/* line 294, ../scss/_styles.scss */
 .company-links a {
   text-decoration: none;
 }
 
-/* line 279, ../scss/_styles.scss */
-.headshot {
-  margin-top: 22px;
-}
-
-/* line 284, ../scss/_styles.scss */
+/* line 299, ../scss/_styles.scss */
 .contact {
   line-height: 1.5em;
   margin: 123px 0 188px 88px;

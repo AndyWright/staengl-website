@@ -269,6 +269,23 @@ footer {
 
 .company {
   margin-bottom: 22px;
+
+  .copy {
+    float: left;
+    width: 525px;
+  }
+  .headshot {
+    // @include clearfix;
+    margin: 0 33px 0 33px;
+    float: left;
+    width: 220px;
+  }
+  .clipboard {
+    margin-left: 150px;
+    margin-bottom: 50px;
+    img { margin: 0 44px 0 45px; }
+  }
+
 }
 .company-links {
   margin: 0 44px 111px 44px;
@@ -276,9 +293,7 @@ footer {
   img { margin: 11px 44px; }
   a { text-decoration: none; }
 }
-.headshot {
-  margin-top: 22px;
-}
+
 
 
 .contact {
