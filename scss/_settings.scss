@@ -113,7 +113,7 @@ $default-float: left;
 // Grid Variables
 //
 
-$row-width: emCalc(1200px);
+$row-width: emCalc(960); //emCalc(1200px);
 $column-gutter: emCalc(30px);
 $total-columns: 12;
 
@@ -1195,7 +1195,7 @@ $tooltip-bg: scale-lightness(#000, 22%);
 // $tooltip-close-font-color: #888;
 // $tooltip-font-size-sml: emCalc(14px);
 // $tooltip-radius: $global-radius;
-// $tooltip-pip-size: 5px;
+$tooltip-pip-size: 0; //5px;
 
 //
 // Top Bar Variables
