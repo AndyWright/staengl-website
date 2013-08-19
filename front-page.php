@@ -4,7 +4,7 @@
 changing every 5-7 seconds or so. The text in the box will come from the
 project-specific information for that project from its own project page) -->
 <div class="hero">
-  <img src="<?php staengl_image('hero/crossing01.jpg'); ?>"></div>
+  <?php if (function_exists('slideshow')) { slideshow($output = true, $post_id = false, $gallery_id = false, $params = array()); } ?>
 </div>
 
 <div class="innards bottomless">

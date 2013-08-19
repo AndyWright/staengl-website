@@ -56,6 +56,13 @@ deployment
 
 make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:
 
+plugins
+====
+
+* http://wordpress.org/plugins/slideshow-gallery/
+
+
+
 ```
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
