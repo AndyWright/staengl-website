@@ -14,13 +14,8 @@ TODO:
 
 * home page
   * make Hero image rotator work
-  * substitute Solar Panel image with cropped one from Crossings (done)
-  * replace integral group logo with Architecture 2030 Challenge (done)
 * company page
-  * Galen headshot and bio (done)
-  * logos (done)
 * services page
-  * Revit3D image (done)
   * Longridge model image (need image)
 
 
@@ -47,6 +42,14 @@ $ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/
 * http://mattbanks.me/wordpress-deployments-with-git/
 * http://www.walmik.com/2012/03/manage-your-custom-wordpress-theme-using-git-instead-of-ftp/
 
+
+development
+=====
+```
+$ ln -s ~/wrk/staengl/wordpress-3.6 ~/wrk/staengl/wordpress
+$ mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangle-website
+$ ln -s ~/wrk/staengl/staengle-website ~/wrk/staengle/wordpress/wp-content/themes/wp-zurb-boilerplate
+```
 
 deployment
 =====
