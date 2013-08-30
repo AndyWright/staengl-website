@@ -21,6 +21,7 @@ local_db_host     = "127.0.0.1"
 local_prefix      = 'wp\_'  # wp_ - must be escaped for sed
 
 local_root        = "/Users/jim/wrk/staengl/staengl-website"
+local_wp        = "/Users/jim/wrk/staengl/wordpress"
 local_theme       = local_root
 local_plugins     = ""
 local_mu          = ""
@@ -77,11 +78,11 @@ end
 namespace :uploads do
   desc "Pull Uploads"
   task :pull do
-    system( "rsync -avz  #{ssh_alias}:#{remote_root}/wp-content/uploads/  #{local_root}/wp-content/uploads/")
+    system( "rsync -avzr  #{ssh_alias}:#{remote_root}/wp-content/uploads/  #{local_wp}/wp-content/uploads/")
   end
   desc "Push Uploads"
   task :push do
-    system( "rsync -avz  #{local_root}/wp-content/uploads/ #{ssh_alias}:#{remote_root}/wp-content/uploads/ ")
+    system( "rsync -avzr  #{local_wp}/wp-content/uploads/ #{ssh_alias}:#{remote_root}/wp-content/uploads/ ")
   end
 end
 

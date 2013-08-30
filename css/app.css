@@ -1807,13 +1807,12 @@ ul.slideshow span {
 /* line 26, ../scss/_slideshow.scss */
 #slideshow-wrapper #information {
   text-align: left;
-  font-family: Verdana, Arial, Helvetica, sans-serif !important;
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 960px;
   height: 0;
-  background: #000000;
-  color: #FFFFFF;
+  background: #fff;
+  color: #000;
   overflow: hidden;
   z-index: 200;
   opacity: .7;

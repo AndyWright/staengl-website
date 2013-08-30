@@ -25,13 +25,13 @@ ul.slideshow span { display:none; }
   }
   #information {
     text-align:left;
-    font-family:Verdana, Arial, Helvetica, sans-serif !important;
+    // font-family:Verdana, Arial, Helvetica, sans-serif !important;
     position:absolute;
-    bottom:0;
+    top: 0; // bottom:0;
     width:960px;
     height:0;
-    background:#000000;
-    color:#FFFFFF;
+    background:#fff;
+    color:#000;
     overflow:hidden;
     z-index:200;
     opacity:.7;

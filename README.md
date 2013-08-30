@@ -7,6 +7,7 @@ made some good use of [this github repo](https://github.com/wilhelser/WordPress-
 
 TODO:
 
+* show information in slideshow
 * set up wiki and document workflow
 * set up hosting
 * make rsync deploy with css and js compression
@@ -20,9 +21,14 @@ the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp
 
 there are instructions there for setting up local development environment.
 
+http://staengl.engine-earring.com/wp-content/uploads/slideshow-gallery/crossings02.jpg
+
 ```
 $ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/staengl-website
 ```
+### install this
+* Custom Content Type Manager 0.9.7.11 - via admin tool
+* slideshow-gallery - installed from the them reposistory (vendor/plugins/slideshow-gallery) - this has been modified so make sure you install from there
 
 ### site urls
 [local development](http://staengl.dev/company/)
@@ -47,9 +53,6 @@ $ ln -s ~/wrk/staengl/staengle-website ~/wrk/staengle/wordpress/wp-content/theme
 ### deployment
 * make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:
 * copy __jquery-1.10.2.min.map__ to __wp-includes/js/jquery__
-
-### gallery-slideshow plugin has been modified
-make sure you install it from this repository on any server
 
 ```
 # BEGIN WordPress
