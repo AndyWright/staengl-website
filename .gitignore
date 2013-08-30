@@ -17,4 +17,4 @@ sitemap.xml.gz
 .ruby-version
 .sass-cache/
 tmp/
-vendor/
+vendor/plugins/royalslider-3.1.3

@@ -1,0 +1,94 @@
+// these styles all override the commented out styles in the galler-css.php file
+// of the slideshow-gallery plugin
+//
+
+$thumbnail-dim: 60px;
+
+ul.slideshow { list-style:none !important; color:#fff; }
+ul.slideshow span { display:none; }
+#slideshow-wrapper {
+  position:relative;
+  width:960px;
+  // background:#000000;
+  padding:0 0 0 0;
+  border:1px solid #CCCCCC;
+  margin:0;
+  display:none;
+  * { margin:0; padding:0; }
+  #fullsize {
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+    width:960px;
+    height:506px;
+    border: none;
+  }
+  #information {
+    text-align:left;
+    font-family:Verdana, Arial, Helvetica, sans-serif !important;
+    position:absolute;
+    bottom:0;
+    width:960px;
+    height:0;
+    background:#000000;
+    color:#FFFFFF;
+    overflow:hidden;
+    z-index:200;
+    opacity:.7;
+    filter:alpha(opacity=70);
+    h3 { color:#FFFFFF; padding:4px 8px 3px; margin:0 !important; font-size:16px; font-weight:bold; }
+    p { color:#FFFFFF; padding:0 8px 8px; margin:0 !important; font-size: 14px; font-weight:normal; }
+  }
+  #image {
+    width:962px;
+    // no-repeat;
+    img { position:absolute; left:0; border:none; height:auto; max-width:100%; }
+  }
+  .imgnav { position:absolute; width:25%; height:520px; cursor:pointer; z-index:150; }
+  #imgprev, #imgnext { background-image: none; }
+  #imgprev { left:0; }
+  #imgnext { right:0; }
+  #imglink { position:absolute; zoom:1; background-color:#ffffff; height:520px; width:50%; left:25%; right:20%; z-index:999; opacity:0; filter:alpha(opacity=0); }
+  .linkhover { background:transparent url('../images/link.gif') center center no-repeat !important; text-indent:-9999px; opacity:.4 !important; filter:alpha(opacity=40) !important; }
+  #thumbnails { background: transparent; }
+  .thumbstop { margin-bottom:8px !important; }
+  .thumbsbot { margin-top: - $thumbnail-dim !important; }
+  #slideleft, #slideright {
+    width: $thumbnail-dim;
+    height: $thumbnail-dim;
+    background-color: transparent; //#222;
+    // &:hover { background-color:#333; }
+  }
+  #slideleft {
+    float:left;
+    // background:url('../images/scroll-left.gif') center center no-repeat;
+  }
+  #slideright {
+    float:right;
+    // background:#222 url('../images/scroll-right.gif') center center no-repeat;
+  }
+  #slidearea {
+    float:left;
+    position:relative;
+    // background:#000000;
+    width:640px;
+    margin-left: 3px;
+    height: $thumbnail-dim;
+    overflow:hidden;
+  }
+  #slider {
+    position:absolute;
+    left:0;
+    height: $thumbnail-dim;
+    z-index: 9999;
+    img { cursor:pointer;
+      border: 1px solid #666;
+      padding: 0;
+      float:left !important;
+      -webkit-filter: grayscale(100%);
+      &:hover { -webkit-filter: grayscale(0); }
+    }
+  }
+  #spinner { position:relative; top:50%; left:45%; text-align:left; }
+  #spinner img { border:none; }
+}

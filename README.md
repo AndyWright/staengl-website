@@ -44,10 +44,12 @@ $ mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangle-website
 $ ln -s ~/wrk/staengl/staengle-website ~/wrk/staengle/wordpress/wp-content/themes/wp-zurb-boilerplate
 ```
 
-deployment
-=====
+### deployment
+* make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:
+* copy __jquery-1.10.2.min.map__ to __wp-includes/js/jquery__
 
-make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:
+### gallery-slideshow plugin has been modified
+make sure you install it from this repository on any server
 
 ```
 # BEGIN WordPress

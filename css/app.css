@@ -1770,12 +1770,185 @@ footer {
   margin: 123px 0 188px 88px;
 }
 
-/* line 1, ../scss/_hero.scss */
-#slideshow-wrapper, #fullsize, #image {
-  #  width: 960px;
+/* line 7, ../scss/_slideshow.scss */
+ul.slideshow {
+  list-style: none !important;
+  color: #fff;
 }
 
-/* line 5, ../scss/_hero.scss */
+/* line 8, ../scss/_slideshow.scss */
+ul.slideshow span {
+  display: none;
+}
+
+/* line 9, ../scss/_slideshow.scss */
+#slideshow-wrapper {
+  position: relative;
+  width: 960px;
+  padding: 0 0 0 0;
+  border: 1px solid #CCCCCC;
+  margin: 0;
+  display: none;
+}
+/* line 17, ../scss/_slideshow.scss */
+#slideshow-wrapper * {
+  margin: 0;
+  padding: 0;
+}
+/* line 18, ../scss/_slideshow.scss */
+#slideshow-wrapper #fullsize {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 960px;
+  height: 506px;
+  border: none;
+}
+/* line 26, ../scss/_slideshow.scss */
+#slideshow-wrapper #information {
+  text-align: left;
+  font-family: Verdana, Arial, Helvetica, sans-serif !important;
+  position: absolute;
+  bottom: 0;
+  width: 960px;
+  height: 0;
+  background: #000000;
+  color: #FFFFFF;
+  overflow: hidden;
+  z-index: 200;
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+/* line 39, ../scss/_slideshow.scss */
+#slideshow-wrapper #information h3 {
+  color: #FFFFFF;
+  padding: 4px 8px 3px;
+  margin: 0 !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 40, ../scss/_slideshow.scss */
+#slideshow-wrapper #information p {
+  color: #FFFFFF;
+  padding: 0 8px 8px;
+  margin: 0 !important;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 42, ../scss/_slideshow.scss */
+#slideshow-wrapper #image {
+  width: 962px;
+}
+/* line 45, ../scss/_slideshow.scss */
+#slideshow-wrapper #image img {
+  position: absolute;
+  left: 0;
+  border: none;
+  height: auto;
+  max-width: 100%;
+}
+/* line 47, ../scss/_slideshow.scss */
+#slideshow-wrapper .imgnav {
+  position: absolute;
+  width: 25%;
+  height: 520px;
+  cursor: pointer;
+  z-index: 150;
+}
+/* line 48, ../scss/_slideshow.scss */
 #slideshow-wrapper #imgprev, #slideshow-wrapper #imgnext {
   background-image: none;
+}
+/* line 49, ../scss/_slideshow.scss */
+#slideshow-wrapper #imgprev {
+  left: 0;
+}
+/* line 50, ../scss/_slideshow.scss */
+#slideshow-wrapper #imgnext {
+  right: 0;
+}
+/* line 51, ../scss/_slideshow.scss */
+#slideshow-wrapper #imglink {
+  position: absolute;
+  zoom: 1;
+  background-color: #ffffff;
+  height: 520px;
+  width: 50%;
+  left: 25%;
+  right: 20%;
+  z-index: 999;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+/* line 52, ../scss/_slideshow.scss */
+#slideshow-wrapper .linkhover {
+  background: transparent url("../images/link.gif") center center no-repeat !important;
+  text-indent: -9999px;
+  opacity: .4 !important;
+  filter: alpha(opacity=40) !important;
+}
+/* line 53, ../scss/_slideshow.scss */
+#slideshow-wrapper #thumbnails {
+  background: transparent;
+}
+/* line 54, ../scss/_slideshow.scss */
+#slideshow-wrapper .thumbstop {
+  margin-bottom: 8px !important;
+}
+/* line 55, ../scss/_slideshow.scss */
+#slideshow-wrapper .thumbsbot {
+  margin-top: -60px !important;
+}
+/* line 56, ../scss/_slideshow.scss */
+#slideshow-wrapper #slideleft, #slideshow-wrapper #slideright {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+/* line 62, ../scss/_slideshow.scss */
+#slideshow-wrapper #slideleft {
+  float: left;
+}
+/* line 66, ../scss/_slideshow.scss */
+#slideshow-wrapper #slideright {
+  float: right;
+}
+/* line 70, ../scss/_slideshow.scss */
+#slideshow-wrapper #slidearea {
+  float: left;
+  position: relative;
+  width: 640px;
+  margin-left: 3px;
+  height: 60px;
+  overflow: hidden;
+}
+/* line 79, ../scss/_slideshow.scss */
+#slideshow-wrapper #slider {
+  position: absolute;
+  left: 0;
+  height: 60px;
+  z-index: 9999;
+}
+/* line 84, ../scss/_slideshow.scss */
+#slideshow-wrapper #slider img {
+  cursor: pointer;
+  border: 1px solid #666;
+  padding: 0;
+  float: left !important;
+  -webkit-filter: grayscale(100%);
+}
+/* line 89, ../scss/_slideshow.scss */
+#slideshow-wrapper #slider img:hover {
+  -webkit-filter: grayscale(0);
+}
+/* line 92, ../scss/_slideshow.scss */
+#slideshow-wrapper #spinner {
+  position: relative;
+  top: 50%;
+  left: 45%;
+  text-align: left;
+}
+/* line 93, ../scss/_slideshow.scss */
+#slideshow-wrapper #spinner img {
+  border: none;
 }
