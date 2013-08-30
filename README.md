@@ -14,13 +14,6 @@ TODO:
 
 * home page
   * make Hero image rotator work
-* company page
-* services page
-  * Longridge model image (need image)
-
-
-###content
-is in [jumpchart](https://engineearring.jumpchart.com/site/view/131622/)
 
 ###theme
 the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)

@@ -1769,3 +1769,13 @@ footer {
   line-height: 1.5em;
   margin: 123px 0 188px 88px;
 }
+
+/* line 1, ../scss/_hero.scss */
+#slideshow-wrapper, #fullsize, #image {
+  #  width: 960px;
+}
+
+/* line 5, ../scss/_hero.scss */
+#slideshow-wrapper #imgprev, #slideshow-wrapper #imgnext {
+  background-image: none;
+}
