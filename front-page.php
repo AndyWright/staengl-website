@@ -17,7 +17,7 @@ project-specific information for that project from its own project page) -->
   </div>
 </div>
 
-<div class="innards">
+<div class="innards">ƒ
   <div class="copy">
     <div class="one">
       <p>Staengl Engineering is a Mechanical, Electrical and Plumbing Engineering

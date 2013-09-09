@@ -8,13 +8,7 @@
 <div class="innards">
 <div class="services">
 <h1>Services</h1>
-<?php if (have_posts()): ?>
-  <?php while (have_posts()): the_post(); ?>
-    <?php the_content(); ?>
-  <?php endwhile; ?>
-<?php else: ?>
-  <?php get_template_part('notfound'); ?>
-<?php endif; ?>
+
 
 
 <img class="revit" src="<?php bloginfo('template_directory');?>/img/Revit-3D-image-of-system.jpg" >

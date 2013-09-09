@@ -267,7 +267,7 @@ footer {
 }
 
 // special pages
-.services, .company, .contact, .news {
+.services, .company, .contact, .news, .projects {
   h1 { margin-bottom: 66px; }
 }
 
@@ -302,12 +302,40 @@ footer {
   a { text-decoration: none; }
 }
 
-
-
 .contact {
   // font-size: 1.25em;
   line-height: 1.5em;
   margin: 123px 0 188px 88px;
 
+}
+
+.innards {
+  .projects {
+    background-color: $limon;
+
+    margin: 66px 24px 66px 24px;
+    h1 { margin-bottom: 44px; }
+    // h3 { font-size: emCalc(18px); }
+
+    .one, .two, .three {
+      background-color: $peachie;
+
+      border: none;
+      // border-left: solid 1px $borderline;
+      font-weight: 300;
+      font-size: emCalc(20px);
+      line-height: emCalc(24px);
+      float: left;
+      width: 280px; //300px; //320px;
+      p { margin: 5px; }
+    }
+    .one, .two {
+      margin-right: 12px;
+    }
+    .two {
+      width: 284px;
+    }
+
+  }
 }
 
