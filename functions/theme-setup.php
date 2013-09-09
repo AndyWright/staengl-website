@@ -68,6 +68,7 @@ function boiler_js()
 {
     // modernizr goes at the top, everything else at the bottom
     wp_enqueue_script('boiler-modernizr-js', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', null, null, false);
+    // wp_enqueue_script('boiler-bxslider-js', get_template_directory_uri() . '/js/vendor/jquery.bxslider.min.js', null, null, false);
 
     // HINT: comment outt he ones you don't use
     wp_enqueue_script('boiler-theme-js', get_template_directory_uri() . '/js/foundation/foundation.js', null, null, true);
@@ -85,6 +86,7 @@ function boiler_js()
     // wp_enqueue_script('boiler-section-js', get_template_directory_uri() . '/js/foundation/foundation.section.js', null, null, true);
     wp_enqueue_script('boiler-tooltips-js', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', null, null, true);
     // wp_enqueue_script('boiler-topbar-js', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', null, null, true);
+
     wp_enqueue_script('boiler-theme-js', get_template_directory_uri() . '/js/theme.js', null, null, true);
     if (is_singular('post')){
         wp_enqueue_script('comment-reply');
