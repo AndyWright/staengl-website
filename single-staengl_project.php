@@ -2,8 +2,10 @@
 /**
  * Sample template for displaying single staengl_project posts.
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
+<div class="innards">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -26,5 +28,5 @@ foreach ($images as $img) {
 
 <?php endwhile; // end of the loop. ?>
 
-<?php get_sidebar(); ?>
+</div> <!-- class="innards" -->
 <?php get_footer(); ?>
