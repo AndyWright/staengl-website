@@ -6,27 +6,38 @@
 
 <?php get_header(); ?>
 <div class="innards">
+<div class="project">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
+<div class="top">
+    <div class="one">
+        <h1><?php the_title(); ?></h1>
+        <p class="subtitle"><?php print_custom_field('project_subtitle'); ?></p>
+        <p class="location"><?php print_custom_field('project_location'); ?></p>
+        <h5>CLIENT</h5>
+        <p class="client"><?php print_custom_field('client_name'); ?></p>
+        <p class="deets"><?php the_content(); ?></p>
+    </div>
+    <div class="two">
+        &nbsp;
+        <?php $images = get_custom_field('project_images:to_image_s'); ?>
+    </div>
+</div>
+<div class="bottom">
+    <h4>OTHER PROJECTS</h4>
+    <div class="filmstrip">&nbsp;</div>
 
-  <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
-    <?php the_excerpt(); ?>
-
-    <h2>Custom Fields</h2>
-
-    <strong>client name</strong> <?php print_custom_field('client_name'); ?><br />
-    <strong>project subtitle</strong> <?php print_custom_field('project_subtitle'); ?><br />
-    <strong>project location</strong> <?php print_custom_field('project_location'); ?><br />
-    <strong>project images:</strong> <?php $images = get_custom_field('project_images:to_image_src');
+<?php
 foreach ($images as $img) {
   printf('<img src="%s"/>', $img);
 }
-?><br />
-    <strong>bottom slider image</strong> <?php print_custom_field('bottom_slider_image'); ?><br />
+?>
 
+</div>
 <?php endwhile; // end of the loop. ?>
 
+
+</div>
 </div> <!-- class="innards" -->
 <?php get_footer(); ?>
