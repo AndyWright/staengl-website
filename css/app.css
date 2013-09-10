@@ -1772,34 +1772,107 @@ footer {
 
 /* line 313, ../scss/_styles.scss */
 .innards .projects {
-  background-color: rgba(180, 255, 103, 0.44);
+  *zoom: 1;
   margin: 66px 24px 66px 24px;
 }
-/* line 317, ../scss/_styles.scss */
+/* line 121, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
+.innards .projects:before, .innards .projects:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
+.innards .projects:after {
+  clear: both;
+}
+/* line 316, ../scss/_styles.scss */
 .innards .projects h1 {
-  margin-bottom: 44px;
+  margin-bottom: 33px;
+}
+/* line 318, ../scss/_styles.scss */
+.innards .projects h3 {
+  font-size: 1.25em;
+  color: #898989;
+  margin-bottom: 33px;
 }
 /* line 320, ../scss/_styles.scss */
-.innards .projects .one, .innards .projects .two, .innards .projects .three {
-  background-color: rgba(255, 229, 204, 0.44);
+.innards .projects .one, .innards .projects .two {
   border: none;
   font-weight: 300;
   font-size: 1.25em;
   line-height: 1.5em;
   float: left;
-  width: 280px;
+  width: 420px;
 }
 /* line 330, ../scss/_styles.scss */
-.innards .projects .one p, .innards .projects .two p, .innards .projects .three p {
+.innards .projects .one p, .innards .projects .two p {
   margin: 5px;
 }
 /* line 332, ../scss/_styles.scss */
-.innards .projects .one, .innards .projects .two {
-  margin-right: 12px;
+.innards .projects .one {
+  margin-right: 30px;
+}
+/* line 334, ../scss/_styles.scss */
+.innards .projects .one-category {
+  margin-bottom: 66px;
 }
 /* line 335, ../scss/_styles.scss */
-.innards .projects .two {
-  width: 284px;
+.innards .projects .one-project {
+  *zoom: 1;
+  margin-bottom: 28px;
+}
+/* line 121, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
+.innards .projects .one-project:before, .innards .projects .one-project:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../.rvm/gems/ruby-1.9.3-p392@staengl/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
+.innards .projects .one-project:after {
+  clear: both;
+}
+/* line 338, ../scss/_styles.scss */
+.innards .projects .one-project p {
+  margin: 0;
+}
+/* line 339, ../scss/_styles.scss */
+.innards .projects .one-project .thumbnail, .innards .projects .one-project .textnail {
+  float: left;
+  display: inline-block;
+}
+/* line 340, ../scss/_styles.scss */
+.innards .projects .one-project .thumbnail {
+  background-color: #adadad;
+  width: 99px;
+  height: 99px;
+  margin-right: 16px;
+}
+/* line 346, ../scss/_styles.scss */
+.innards .projects .one-project .textnail {
+  width: 300px;
+}
+/* line 349, ../scss/_styles.scss */
+.innards .projects .one-project .textnail p.title a {
+  font-size: 1.25em;
+  line-height: 1.125em;
+  font-weight: 400;
+}
+/* line 354, ../scss/_styles.scss */
+.innards .projects .one-project .textnail p.title a:link, .innards .projects .one-project .textnail p.title a:visited, .innards .projects .one-project .textnail p.title a:hover, .innards .projects .one-project .textnail p.title a:active {
+  color: #000;
+  text-decoration: none;
+}
+/* line 358, ../scss/_styles.scss */
+.innards .projects .one-project .textnail p.title a:hover {
+  color: #5fa73a;
+}
+/* line 362, ../scss/_styles.scss */
+.innards .projects .one-project .textnail p.subtitle {
+  font-size: 0.875em;
+  color: #3f6e26;
+  font-weight: 400;
+}
+/* line 367, ../scss/_styles.scss */
+.innards .projects .one-project .textnail p.location {
+  font-size: 0.75em;
 }
 
 /* line 7, ../scss/_slideshow.scss */

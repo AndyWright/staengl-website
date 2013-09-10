@@ -311,14 +311,14 @@ footer {
 
 .innards {
   .projects {
-    background-color: $limon;
-
+    @include clearfix;
     margin: 66px 24px 66px 24px;
-    h1 { margin-bottom: 44px; }
-    // h3 { font-size: emCalc(18px); }
+    h1 { margin-bottom: 33px; }
 
-    .one, .two, .three {
-      background-color: $peachie;
+    h3 { font-size: emCalc(20px);  color: $lightish-greyish; margin-bottom: 33px; }
+
+    .one, .two {
+      // background-color: $peachie;
 
       border: none;
       // border-left: solid 1px $borderline;
@@ -326,15 +326,52 @@ footer {
       font-size: emCalc(20px);
       line-height: emCalc(24px);
       float: left;
-      width: 280px; //300px; //320px;
+      width: 420px; //300px; //320px;
       p { margin: 5px; }
     }
-    .one, .two {
-      margin-right: 12px;
+    .one { margin-right: 30px; }
+
+    .one-category { margin-bottom: 66px; }
+    .one-project {
+      @include clearfix;
+      margin-bottom: 28px;
+      p { margin: 0; }
+      .thumbnail, .textnail { float: left; display: inline-block; }
+      .thumbnail {
+        background-color: $lighter-greyish;
+        width: 99px;
+        height: 99px;
+        margin-right: 16px;
+      }
+      .textnail {
+        width: 300px;
+        p.title {
+          a {
+            font-size: emCalc(20px);
+            line-height: emCalc(18px);
+            font-weight: 400;
+          }
+          a:link, a:visited, a:hover, a:active {
+            color: #000;
+            text-decoration: none;
+          }
+          a:hover {
+            color: $footer-green;
+          }
+        }
+        p.subtitle {
+          font-size: emCalc(14px);
+          color: $darker-green;
+          font-weight: 400;
+         }
+        p.location {
+          font-size: emCalc(12px);
+         }
+      }
     }
-    .two {
-      width: 284px;
-    }
+
+
+
 
   }
 }
