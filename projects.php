@@ -16,6 +16,8 @@ $args['post_type'] =  'staengl_project';
 $args['post_status'] = 'publish';
 $args['taxonomy'] = 'category';
 $args['post_status'] = 'publish';
+$args['orderby'] = 'post_date';
+$args['order'] = 'DESC';
 
 echo '<div class="one">';
 

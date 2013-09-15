@@ -15,8 +15,6 @@
         <h1><?php the_title(); ?></h1>
         <p class="subtitle"><?php print_custom_field('project_subtitle'); ?></p>
         <p class="location"><?php print_custom_field('project_location'); ?></p>
-        <h5>CLIENT</h5>
-        <p class="client"><?php print_custom_field('client_name'); ?></p>
         <p class="deets"><?php the_content(); ?></p>
     </div>
     <div class="two">

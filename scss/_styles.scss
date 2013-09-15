@@ -343,18 +343,9 @@ footer {
       .textnail {
         width: 300px;
         p.title {
-          a {
-            font-size: emCalc(20px);
-            line-height: emCalc(18px);
-            font-weight: 400;
-          }
-          a:link, a:visited, a:hover, a:active {
-            color: #000;
-            text-decoration: none;
-          }
-          a:hover {
-            color: $footer-green;
-          }
+          a { font-size: emCalc(20px); line-height: emCalc(18px); font-weight: 400; }
+          a:link, a:visited, a:hover, a:active { color: #000; text-decoration: none; }
+          a:hover { color: $footer-green; }
         }
         p.subtitle {
           font-size: emCalc(14px);
@@ -373,6 +364,9 @@ footer {
     h1, h5 { color: $footer-green; text-transform: uppercase; }
     h1 { font-size: emCalc(18px); margin: 0 0 4px 0; }
     h5 { font-size: emCalc(14px); margin: 14px 0 4px 0; }
+    a { font-weight: 400; }
+    a:link, a:visited, a:hover, a:active { color: #960000; text-decoration: none; }
+    a:hover { color: red; }
     .top {
       @include clearfix;
       .one, .two {
@@ -396,9 +390,6 @@ footer {
         font-color: $medium-greyish;
       }
       p.location { margin-bottom: 44px; }
-      p.client {
-        font-weight: 600;
-      }
     }
     .bottom {
       h4 { color: $lighter-greyish; margin-bottom: 7px; }

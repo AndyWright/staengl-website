@@ -1855,26 +1855,26 @@ footer {
   line-height: 1.125em;
   font-weight: 400;
 }
-/* line 351, ../scss/_styles.scss */
+/* line 347, ../scss/_styles.scss */
 .innards .projects .one-project .textnail p.title a:link, .innards .projects .one-project .textnail p.title a:visited, .innards .projects .one-project .textnail p.title a:hover, .innards .projects .one-project .textnail p.title a:active {
   color: #000;
   text-decoration: none;
 }
-/* line 355, ../scss/_styles.scss */
+/* line 348, ../scss/_styles.scss */
 .innards .projects .one-project .textnail p.title a:hover {
   color: #5fa73a;
 }
-/* line 359, ../scss/_styles.scss */
+/* line 350, ../scss/_styles.scss */
 .innards .projects .one-project .textnail p.subtitle {
   font-size: 0.875em;
   color: #3f6e26;
   font-weight: 400;
 }
-/* line 364, ../scss/_styles.scss */
+/* line 355, ../scss/_styles.scss */
 .innards .projects .one-project .textnail p.location {
   font-size: 0.75em;
 }
-/* line 370, ../scss/_styles.scss */
+/* line 361, ../scss/_styles.scss */
 .innards .project {
   *zoom: 1;
   margin: 66px 24px 66px 24px;
@@ -1888,22 +1888,35 @@ footer {
 .innards .project:after {
   clear: both;
 }
-/* line 373, ../scss/_styles.scss */
+/* line 364, ../scss/_styles.scss */
 .innards .project h1, .innards .project h5 {
   color: #5fa73a;
   text-transform: uppercase;
 }
-/* line 374, ../scss/_styles.scss */
+/* line 365, ../scss/_styles.scss */
 .innards .project h1 {
   font-size: 1.125em;
   margin: 0 0 4px 0;
 }
-/* line 375, ../scss/_styles.scss */
+/* line 366, ../scss/_styles.scss */
 .innards .project h5 {
   font-size: 0.875em;
   margin: 14px 0 4px 0;
 }
-/* line 376, ../scss/_styles.scss */
+/* line 367, ../scss/_styles.scss */
+.innards .project a {
+  font-weight: 400;
+}
+/* line 368, ../scss/_styles.scss */
+.innards .project a:link, .innards .project a:visited, .innards .project a:hover, .innards .project a:active {
+  color: #960000;
+  text-decoration: none;
+}
+/* line 369, ../scss/_styles.scss */
+.innards .project a:hover {
+  color: red;
+}
+/* line 370, ../scss/_styles.scss */
 .innards .project .top {
   *zoom: 1;
 }
@@ -1916,52 +1929,48 @@ footer {
 .innards .project .top:after {
   clear: both;
 }
-/* line 378, ../scss/_styles.scss */
+/* line 372, ../scss/_styles.scss */
 .innards .project .top .one, .innards .project .top .two {
   border: none;
   float: left;
 }
-/* line 381, ../scss/_styles.scss */
+/* line 375, ../scss/_styles.scss */
 .innards .project .top .one p, .innards .project .top .two p {
   margin: 0 0 3px 0;
   font-size: 0.6875em;
   line-height: 1.65em;
 }
-/* line 383, ../scss/_styles.scss */
+/* line 377, ../scss/_styles.scss */
 .innards .project .top .one {
   margin-right: 24px;
   width: 320px;
 }
-/* line 387, ../scss/_styles.scss */
+/* line 381, ../scss/_styles.scss */
 .innards .project .top .two {
   width: 520px;
   height: 600px;
   background-color: #adadad;
 }
-/* line 392, ../scss/_styles.scss */
+/* line 386, ../scss/_styles.scss */
 .innards .project .top p.subtitle {
   text-transform: uppercase;
   font-weight: 600;
   font-color: #3d3d3d;
 }
-/* line 398, ../scss/_styles.scss */
+/* line 392, ../scss/_styles.scss */
 .innards .project .top p.location {
   margin-bottom: 44px;
 }
-/* line 399, ../scss/_styles.scss */
-.innards .project .top p.client {
-  font-weight: 600;
-}
-/* line 403, ../scss/_styles.scss */
+/* line 394, ../scss/_styles.scss */
 .innards .project .bottom {
   margin-top: 22px;
 }
-/* line 404, ../scss/_styles.scss */
+/* line 395, ../scss/_styles.scss */
 .innards .project .bottom h4 {
   color: #adadad;
   margin-bottom: 7px;
 }
-/* line 406, ../scss/_styles.scss */
+/* line 397, ../scss/_styles.scss */
 .innards .project .bottom .filmstrip {
   background-color: #adadad;
   height: 123px;
