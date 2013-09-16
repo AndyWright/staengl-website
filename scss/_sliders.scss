@@ -1,3 +1,10 @@
 // classes for specific bxslider slideshows
 //
 
+.project {
+  .bx-viewport { border-width: 0; }
+  ul.project-slideshow {
+    margin: 0;
+    padding: 0;
+  }
+}

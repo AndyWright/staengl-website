@@ -16,6 +16,12 @@ TODO:
 * home page
   * make Hero image rotator work
 
+###image sizes
+* Project Slideshow - 520px wide
+* Projects Filmstrip - 123px square
+* Projects Thumbnails - 99px square (using 123px images)
+* Home Hero - 960px wide 502px high
+
 ###theme
 the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)
 

@@ -1958,29 +1958,29 @@ footer {
 /* line 386, ../scss/_styles.scss */
 .innards .project .top .two {
   width: 520px;
-  height: 600px;
-  background-color: #adadad;
+  height: 821px;
+  padding: 0;
 }
-/* line 391, ../scss/_styles.scss */
+/* line 392, ../scss/_styles.scss */
 .innards .project .top p.subtitle {
   text-transform: uppercase;
   font-weight: 600;
   font-color: #3d3d3d;
 }
-/* line 397, ../scss/_styles.scss */
+/* line 398, ../scss/_styles.scss */
 .innards .project .top p.location {
   margin-bottom: 44px;
 }
-/* line 399, ../scss/_styles.scss */
+/* line 400, ../scss/_styles.scss */
 .innards .project .bottom {
   margin-top: 22px;
 }
-/* line 400, ../scss/_styles.scss */
+/* line 401, ../scss/_styles.scss */
 .innards .project .bottom h4 {
   color: #adadad;
   margin-bottom: 7px;
 }
-/* line 402, ../scss/_styles.scss */
+/* line 403, ../scss/_styles.scss */
 .innards .project .bottom .filmstrip {
   background-color: #adadad;
   height: 123px;
@@ -2199,11 +2199,6 @@ ul.slideshow span {
 ===================================*/
 /* line 32, ../scss/_bxslider.scss */
 .bx-wrapper .bx-viewport {
-  -moz-box-shadow: 0 0 5px #ccc;
-  -webkit-box-shadow: 0 0 5px #ccc;
-  box-shadow: 0 0 5px #ccc;
-  border: solid #fff 5px;
-  left: -5px;
   background: #fff;
 }
 
@@ -2378,4 +2373,14 @@ ul.slideshow span {
   display: block;
   font-size: .85em;
   padding: 10px;
+}
+
+/* line 5, ../scss/_sliders.scss */
+.project .bx-viewport {
+  border-width: 0;
+}
+/* line 6, ../scss/_sliders.scss */
+.project ul.project-slideshow {
+  margin: 0;
+  padding: 0;
 }

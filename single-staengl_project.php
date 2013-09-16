@@ -18,16 +18,21 @@
         <p class="deets"><?php the_content(); ?></p>
     </div>
     <div class="two">
-        &nbsp;
-        <?php $images = get_custom_field('project_images:to_image_s'); ?>
+        <ul class="project-slideshow">
+<?php
+$project_images_array = get_custom_field('project_images:to_array', 'to_image_src');
+foreach ($project_images_array as $img) {
+    printf('<li><img src="%s"/></li>', $img);
+}
+?>
+        </ul>
     </div>
 </div>
+<?php endwhile; // end of the loop. ?>
 <div class="bottom">
     <h4>OTHER PROJECTS</h4>
     <?php get_template_part('filmstrip'); ?>
 </div>
-<?php endwhile; // end of the loop. ?>
-
 </div>
 </div> <!-- class="innards" -->
 <?php get_footer(); ?>
