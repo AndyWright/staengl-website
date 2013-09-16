@@ -28,6 +28,7 @@ $ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/
 ```
 ### install this
 * Custom Content Type Manager 0.9.7.11 - via admin tool
+* Relative Image URLs 2.0 - via admin tool
 * slideshow-gallery - installed from the them reposistory (vendor/plugins/slideshow-gallery) - this has been modified so make sure you install from there
 
 ### site urls

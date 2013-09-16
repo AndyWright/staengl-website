@@ -24,17 +24,9 @@
 </div>
 <div class="bottom">
     <h4>OTHER PROJECTS</h4>
-    <div class="filmstrip">&nbsp;</div>
-
-<?php
-foreach ($images as $img) {
-  printf('<img src="%s"/>', $img);
-}
-?>
-
+    <?php get_template_part('filmstrip'); ?>
 </div>
 <?php endwhile; // end of the loop. ?>
-
 
 </div>
 </div> <!-- class="innards" -->
