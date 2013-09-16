@@ -1980,11 +1980,6 @@ footer {
   color: #adadad;
   margin-bottom: 7px;
 }
-/* line 403, ../scss/_styles.scss */
-.innards .project .bottom .filmstrip {
-  background-color: #adadad;
-  height: 123px;
-}
 
 /* line 7, ../scss/_slideshow.scss */
 ul.slideshow {
@@ -2211,10 +2206,10 @@ ul.slideshow span {
 }
 
 /* LOADER */
-/* line 50, ../scss/_bxslider.scss */
+/* line 49, ../scss/_bxslider.scss */
 .bx-wrapper .bx-loading {
   min-height: 50px;
-  background: url(images/bx_loader.gif) center center no-repeat white;
+  background: url("../img/bx_loader.gif") center center no-repeat white;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -2224,7 +2219,7 @@ ul.slideshow span {
 }
 
 /* PAGER */
-/* line 63, ../scss/_bxslider.scss */
+/* line 62, ../scss/_bxslider.scss */
 .bx-wrapper .bx-pager {
   text-align: center;
   font-size: .85em;
@@ -2234,7 +2229,7 @@ ul.slideshow span {
   padding-top: 20px;
 }
 
-/* line 73, ../scss/_bxslider.scss */
+/* line 72, ../scss/_bxslider.scss */
 .bx-wrapper .bx-pager .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
   display: inline-block;
@@ -2242,7 +2237,7 @@ ul.slideshow span {
   *display: inline;
 }
 
-/* line 79, ../scss/_bxslider.scss */
+/* line 78, ../scss/_bxslider.scss */
 .bx-wrapper .bx-pager.bx-default-pager a {
   background: #666;
   text-indent: -9999px;
@@ -2256,36 +2251,36 @@ ul.slideshow span {
   border-radius: 5px;
 }
 
-/* line 93, ../scss/_bxslider.scss */
+/* line 92, ../scss/_bxslider.scss */
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
   background: #000;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
-/* line 99, ../scss/_bxslider.scss */
+/* line 98, ../scss/_bxslider.scss */
 .bx-wrapper .bx-prev {
   left: 10px;
-  background: url(images/controls.png) no-repeat 0 -32px;
+  background: url("../img/controls.png") no-repeat 0 -32px;
 }
 
-/* line 104, ../scss/_bxslider.scss */
+/* line 103, ../scss/_bxslider.scss */
 .bx-wrapper .bx-next {
   right: 10px;
-  background: url(images/controls.png) no-repeat -43px -32px;
+  background: url("../img/controls.png") no-repeat -43px -32px;
 }
 
-/* line 109, ../scss/_bxslider.scss */
+/* line 108, ../scss/_bxslider.scss */
 .bx-wrapper .bx-prev:hover {
   background-position: 0 0;
 }
 
-/* line 113, ../scss/_bxslider.scss */
+/* line 112, ../scss/_bxslider.scss */
 .bx-wrapper .bx-next:hover {
   background-position: -43px 0;
 }
 
-/* line 117, ../scss/_bxslider.scss */
+/* line 116, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
   top: 50%;
@@ -2297,66 +2292,66 @@ ul.slideshow span {
   z-index: 9999;
 }
 
-/* line 128, ../scss/_bxslider.scss */
+/* line 127, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls-direction a.disabled {
   display: none;
 }
 
 /* AUTO CONTROLS (START / STOP) */
-/* line 134, ../scss/_bxslider.scss */
+/* line 133, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls-auto {
   text-align: center;
 }
 
-/* line 138, ../scss/_bxslider.scss */
+/* line 137, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-start {
   display: block;
   text-indent: -9999px;
   width: 10px;
   height: 11px;
   outline: 0;
-  background: url(images/controls.png) -86px -11px no-repeat;
+  background: url("../img/controls.png") -86px -11px no-repeat;
   margin: 0 3px;
 }
 
-/* line 149, ../scss/_bxslider.scss */
+/* line 148, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-start:hover,
 .bx-wrapper .bx-controls-auto .bx-start.active {
   background-position: -86px 0;
 }
 
-/* line 153, ../scss/_bxslider.scss */
+/* line 152, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-stop {
   display: block;
   text-indent: -9999px;
   width: 9px;
   height: 11px;
   outline: 0;
-  background: url(images/controls.png) -86px -44px no-repeat;
+  background: url("../img/controls.png") -86px -44px no-repeat;
   margin: 0 3px;
 }
 
-/* line 164, ../scss/_bxslider.scss */
+/* line 163, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-stop:hover,
 .bx-wrapper .bx-controls-auto .bx-stop.active {
   background-position: -86px -33px;
 }
 
 /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
-/* line 170, ../scss/_bxslider.scss */
+/* line 169, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
   text-align: left;
   width: 80%;
 }
 
-/* line 175, ../scss/_bxslider.scss */
+/* line 174, ../scss/_bxslider.scss */
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
   right: 0;
   width: 35px;
 }
 
 /* IMAGE CAPTIONS */
-/* line 182, ../scss/_bxslider.scss */
+/* line 181, ../scss/_bxslider.scss */
 .bx-wrapper .bx-caption {
   position: absolute;
   bottom: 0;
@@ -2366,7 +2361,7 @@ ul.slideshow span {
   width: 100%;
 }
 
-/* line 191, ../scss/_bxslider.scss */
+/* line 190, ../scss/_bxslider.scss */
 .bx-wrapper .bx-caption span {
   color: #fff;
   font-family: Arial;
@@ -2380,7 +2375,7 @@ ul.slideshow span {
   border-width: 0;
 }
 /* line 6, ../scss/_sliders.scss */
-.project ul.project-slideshow {
+.project ul.project-slideshow, .project ul.projects-filmstrip {
   margin: 0;
   padding: 0;
 }
