@@ -47,7 +47,8 @@ $results = $Q->get_posts($args);
 foreach ($results as $r) {
   echo '<div class="one-project">';
   echo '<div class="thumbnail">';
-  // echo '88x88';
+  echo '<a href="' . $r['permalink'] . '"><img src="' . CCTM::filter($r['bottom_slider_image'], 'to_image_src') . '"></a>';
+  echo '';
   echo '</div>';
   echo '<div class="textnail">';
   echo '<p class="title"><a href="' . $r['permalink'] . '">' . $r['post_title'] . '</a></p>';
@@ -70,7 +71,8 @@ $results = $Q->get_posts($args);
 foreach ($results as $r) {
   echo '<div class="one-project">';
   echo '<div class="thumbnail">';
-
+  echo '<a href="' . $r['permalink'] . '"><img src="' . CCTM::filter($r['bottom_slider_image'], 'to_image_src') . '"></a>';
+  echo '';
   echo '</div>';
   echo '<div class="textnail">';
   echo '<p class="title"><a href="' . $r['permalink'] . '">' . $r['post_title'] . '</a></p>';
@@ -88,7 +90,8 @@ $results = $Q->get_posts($args);
 foreach ($results as $r) {
   echo '<div class="one-project">';
   echo '<div class="thumbnail">';
-
+  echo '<a href="' . $r['permalink'] . '"><img src="' . CCTM::filter($r['bottom_slider_image'], 'to_image_src') . '"></a>';
+  echo '';
   echo '</div>';
   echo '<div class="textnail">';
   echo '<p class="title"><a href="' . $r['permalink'] . '">' . $r['post_title'] . '</a></p>';

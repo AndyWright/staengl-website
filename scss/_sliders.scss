@@ -7,4 +7,11 @@
     margin: 0;
     padding: 0;
   }
+
+  ul.projects-filmstrip {
+    img {
+      -webkit-filter: grayscale(100%);
+      &:hover { -webkit-filter: grayscale(0); }
+    }
+  }
 }

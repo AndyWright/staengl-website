@@ -2379,3 +2379,11 @@ ul.slideshow span {
   margin: 0;
   padding: 0;
 }
+/* line 12, ../scss/_sliders.scss */
+.project ul.projects-filmstrip img {
+  -webkit-filter: grayscale(100%);
+}
+/* line 14, ../scss/_sliders.scss */
+.project ul.projects-filmstrip img:hover {
+  -webkit-filter: grayscale(0);
+}
