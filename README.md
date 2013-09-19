@@ -22,12 +22,26 @@ TODO:
 * Projects Thumbnails - 99px square (using 123px images)
 * Home Hero - 960px wide 502px high
 
+###deploying
+```sh
+$ rake theme:push
+```
+
+image/media push from localhost to dreamhost didn't work..
+should be pulling content and database now.
+
+export the custom content type definition if those have changed, then import them on the server.
+
+switch away from and back to the staengl theme on the server.
+
+make sure the pages use the proper templates.
+
+
 ###theme
 the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)
 
 there are instructions there for setting up local development environment.
 
-http://staengl.engine-earring.com/wp-content/uploads/slideshow-gallery/crossings02.jpg
 
 ```
 $ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/staengl-website
@@ -35,7 +49,6 @@ $ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/
 ### install this
 * Custom Content Type Manager 0.9.7.11 - via admin tool
 * Relative Image URLs 2.0 - via admin tool
-* slideshow-gallery - installed from the them reposistory (vendor/plugins/slideshow-gallery) - this has been modified so make sure you install from there
 
 ### site urls
 [local development](http://staengl.dev/company/)

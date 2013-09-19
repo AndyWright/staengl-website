@@ -11,14 +11,14 @@ remote_db_user     = "staenglengineear"
 remote_db_password = "iK74^xmH"
 remote_db_name     = "staengl_engine_earring_c"
 remote_db_host     = "mysql.staengl.engine-earring.com"
-remote_prefix      = 'wp\_gxiyhv\_'  # wp_ - must be escaped for sed
+remote_prefix      = 'wp\_gxiyhv\_'  # wp_gxiyhv_ - escaped for sed
 
 local_vhost       = "staengl.dev"
 local_db_user     = "wp"
 local_db_password = "meeS00"
 local_db_name     = "staengl"
 local_db_host     = "127.0.0.1"
-local_prefix      = 'wp\_'  # wp_ - must be escaped for sed
+local_prefix      = 'wp\_'  # wp_ - escaped for sed
 
 local_root        = "/Users/jim/wrk/staengl/staengl-website"
 local_wp        = "/Users/jim/wrk/staengl/wordpress"
@@ -97,9 +97,9 @@ namespace :plugins do
   end
 end
 
-namespace :mu do
-  desc "Push MU Plugin"
-  task :push do
-    system( "rsync -avz  --exclude-from 'exclude.txt' --delete #{local_mu}/ #{ssh_alias}:#{remote_mu}/")
-  end
-end
+# namespace :mu do
+#   desc "Push MU Plugin"
+#   task :push do
+#     system( "rsync -avz  --exclude-from 'exclude.txt' --delete #{local_mu}/ #{ssh_alias}:#{remote_mu}/")
+#   end
+# end
