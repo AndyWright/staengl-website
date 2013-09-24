@@ -1919,7 +1919,7 @@ footer {
 }
 /* line 373, ../scss/_styles.scss */
 .innards .project a:link, .innards .project a:visited, .innards .project a:hover, .innards .project a:active {
-  color: #960000;
+  color: #182a0f;
   text-decoration: none;
 }
 /* line 374, ../scss/_styles.scss */
@@ -2188,42 +2188,93 @@ footer {
   padding: 10px;
 }
 
-/* line 5, ../scss/_sliders.scss */
+/* line 9, ../scss/_sliders.scss */
 .project .bx-viewport {
   border-width: 0;
 }
-/* line 6, ../scss/_sliders.scss */
+/* line 10, ../scss/_sliders.scss */
 .project ul.project-slideshow, .project ul.projects-filmstrip {
   margin: 0;
   padding: 0;
 }
-/* line 12, ../scss/_sliders.scss */
+/* line 16, ../scss/_sliders.scss */
 .project ul.projects-filmstrip img {
   -webkit-filter: grayscale(100%);
 }
-/* line 14, ../scss/_sliders.scss */
+/* line 18, ../scss/_sliders.scss */
 .project ul.projects-filmstrip img:hover {
   -webkit-filter: grayscale(0);
 }
+/* line 24, ../scss/_sliders.scss */
+.project .bx-wrapper .bx-prev, .project .bx-wrapper .bx-next {
+  height: 39px;
+  width: 39px;
+  background-image: url("../img/controls-sprite.png");
+  background-repeat: no-repeat;
+}
+/* line 35, ../scss/_sliders.scss */
+.project .top .bx-wrapper .bx-prev, .project .top .bx-wrapper .bx-next {
+  top: 50px !important;
+}
+/* line 36, ../scss/_sliders.scss */
+.project .top .bx-wrapper .bx-prev {
+  background-position: 0 0;
+  left: 436px;
+}
+/* line 39, ../scss/_sliders.scss */
+.project .top .bx-wrapper .bx-prev:hover {
+  background-position: 0 -234px;
+}
+/* line 41, ../scss/_sliders.scss */
+.project .top .bx-wrapper .bx-next {
+  background-position: 0 -39px;
+  right: 4px;
+}
+/* line 44, ../scss/_sliders.scss */
+.project .top .bx-wrapper .bx-next:hover {
+  background-position: 0 -273px;
+}
+/* line 51, ../scss/_sliders.scss */
+.project .bottom .bx-wrapper .bx-prev, .project .bottom .bx-wrapper .bx-next {
+  top: 16px !important;
+}
+/* line 52, ../scss/_sliders.scss */
+.project .bottom .bx-wrapper .bx-prev {
+  background-position: 0 -156px;
+  left: 0;
+}
+/* line 55, ../scss/_sliders.scss */
+.project .bottom .bx-wrapper .bx-prev:hover {
+  background-position: 0 -234px;
+}
+/* line 57, ../scss/_sliders.scss */
+.project .bottom .bx-wrapper .bx-next {
+  background-position: 0 -195px;
+  right: 0;
+}
+/* line 60, ../scss/_sliders.scss */
+.project .bottom .bx-wrapper .bx-next:hover {
+  background-position: 0 -273px;
+}
 
-/* line 20, ../scss/_sliders.scss */
+/* line 68, ../scss/_sliders.scss */
 .hero {
   margin-bottom: 60px;
 }
-/* line 23, ../scss/_sliders.scss */
+/* line 71, ../scss/_sliders.scss */
 .hero .bx-viewport {
   border-width: 0;
 }
-/* line 24, ../scss/_sliders.scss */
+/* line 72, ../scss/_sliders.scss */
 .hero .bx-wrapper {
   margin-bottom: 0;
 }
-/* line 25, ../scss/_sliders.scss */
+/* line 73, ../scss/_sliders.scss */
 .hero ul.hero-slideshow {
   margin: 0;
   padding: 0;
 }
-/* line 30, ../scss/_sliders.scss */
+/* line 78, ../scss/_sliders.scss */
 .hero .bx-caption {
   position: absolute;
   top: 42px;
@@ -2232,11 +2283,11 @@ footer {
   bottom: auto;
   background-color: transparent;
 }
-/* line 37, ../scss/_sliders.scss */
+/* line 85, ../scss/_sliders.scss */
 .hero .bx-caption .title, .hero .bx-caption .bottom {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 38, ../scss/_sliders.scss */
+/* line 86, ../scss/_sliders.scss */
 .hero .bx-caption .title {
   color: #000;
   font-family: 'Open Sans', sans-serif;
@@ -2249,14 +2300,14 @@ footer {
   border-bottom: 0;
   font-size: 0.875em;
 }
-/* line 51, ../scss/_sliders.scss */
+/* line 99, ../scss/_sliders.scss */
 .hero .bx-caption .bottom {
   border: solid 3px #fff;
   border-top: 0;
   border-bottom: 0;
   height: 20px;
 }
-/* line 60, ../scss/_sliders.scss */
+/* line 108, ../scss/_sliders.scss */
 .hero #hero-pager-wrapper {
   position: absolute;
   z-index: 9999;
@@ -2264,17 +2315,17 @@ footer {
   border-top: solid 1px #fff;
   width: 100%;
 }
-/* line 67, ../scss/_sliders.scss */
+/* line 115, ../scss/_sliders.scss */
 .hero #hero-pager {
   margin-left: 58px;
 }
-/* line 69, ../scss/_sliders.scss */
+/* line 117, ../scss/_sliders.scss */
 .hero #hero-pager img {
   border: solid 1px #fff;
   border-top: 0;
   -webkit-filter: grayscale(100%);
 }
-/* line 73, ../scss/_sliders.scss */
+/* line 121, ../scss/_sliders.scss */
 .hero #hero-pager img:hover {
   -webkit-filter: grayscale(0);
 }

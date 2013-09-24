@@ -1,6 +1,10 @@
 // classes for specific bxslider slideshows
 //
 
+// used to generate sprite see: http://compass-style.org/help/tutorials/spriting/
+// @import "controls/*.png";
+// @include all-controls-sprites;
+
 .project {
   .bx-viewport { border-width: 0; }
   ul.project-slideshow, ul.projects-filmstrip {
@@ -14,6 +18,50 @@
       &:hover { -webkit-filter: grayscale(0); }
     }
   }
+
+  $control-size: 39px;
+  .bx-wrapper {
+    .bx-prev, .bx-next {
+      height: $control-size;
+      width: $control-size;
+      background-image: url('../img/controls-sprite.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  // next-prev
+  .top {
+    .bx-wrapper {
+      .bx-prev, .bx-next { top: 50px !important; }
+      .bx-prev {
+        background-position: 0 0;
+        left: 436px;
+        &:hover { background-position: 0 -234px; }
+      }
+      .bx-next {
+        background-position: 0 -39px;
+        right: 4px;
+        &:hover { background-position: 0 -273px; }
+      }
+    }
+  }
+
+  .bottom {
+    .bx-wrapper {
+      .bx-prev, .bx-next { top: 16px !important; }
+      .bx-prev {
+        background-position: 0 -156px;
+        left: 0;
+        &:hover { background-position: 0 -234px; }
+      }
+      .bx-next {
+        background-position: 0 -195px;
+        right: 0;
+        &:hover { background-position: 0 -273px; }
+      }
+    }
+  }
+
 }
 
 $hero-inner-offset-left: 58px;

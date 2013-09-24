@@ -23,6 +23,7 @@
 $project_images_array = get_custom_field('project_images:to_array', 'to_image_src');
 foreach ($project_images_array as $img) {
     printf('<li><img src="%s"/></li>', $img);
+    print_r($img);
 }
 ?>
         </ul>
