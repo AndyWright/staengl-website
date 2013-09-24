@@ -15,3 +15,62 @@
     }
   }
 }
+
+$hero-inner-offset-left: 58px;
+.hero {
+  margin-bottom: 60px;
+
+  .bx-viewport { border-width: 0; }
+  .bx-wrapper { margin-bottom: 0; }
+  ul.hero-slideshow {
+    margin: 0;
+    padding: 0;
+    // z-index: 1;
+  }
+  .bx-caption {
+    position: absolute;
+    top: 42px;
+    left: $hero-inner-offset-left - 1;
+    width: 282px;
+    bottom: auto;
+    background-color: transparent;
+    .title, .bottom { background-color: rgba(255, 255, 255, 0.75); }
+    .title {
+      color: #000;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.5em;
+      color: $medium-greyish;
+      // margin-top: 11px 4px;
+      padding: 21px 11px 0 11px;
+      min-height: 71px;
+      margin: 0 1px;
+      border: solid 1px #fff;
+      border-bottom: 0;
+      font-size: emCalc(14px);
+    }
+    .bottom {
+      border: solid 3px #fff;
+      border-top: 0;
+      border-bottom: 0;
+      height: 20px;
+      // margin-left: -1px;
+      // margin-right: -1px;
+    }
+  }
+  #hero-pager-wrapper {
+    position: absolute;
+    z-index: 9999;
+    margin-top: -55px;
+    border-top: solid 1px #fff;
+    width: 100%;
+  }
+  #hero-pager {
+    margin-left: $hero-inner-offset-left;
+    img {
+      border: solid 1px #fff;
+      border-top: 0;
+      -webkit-filter: grayscale(100%);
+      &:hover { -webkit-filter: grayscale(0); }
+    }
+  }
+}

@@ -3,6 +3,14 @@ $(function($) {
 
 });
 
+$('.hero-slideshow').bxSlider({
+  // adaptiveHeight: true,
+  mode: 'fade',
+  captions: true,
+  controls: false,
+  pagerCustom: '#hero-pager'
+});
+
 $('.project-slideshow').bxSlider({
   adaptiveHeight: true,
   mode: 'fade',

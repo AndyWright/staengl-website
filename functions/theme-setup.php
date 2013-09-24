@@ -87,7 +87,7 @@ function boiler_js()
     wp_enqueue_script('boiler-tooltips-js', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', null, null, true);
     // wp_enqueue_script('boiler-topbar-js', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', null, null, true);
 
-    wp_enqueue_script('bxslider-js', get_template_directory_uri() . '/js/vendor/jquery.bxslider.js', null, null, true);
+    wp_enqueue_script('bxslider-js', get_template_directory_uri() . '/js/jquery.bxslider.js', null, null, true);
     // wp_enqueue_script('bxslider-js', get_template_directory_uri() . '/js/vendor/jquery.bxslider.min.js', null, null, true);
 
 

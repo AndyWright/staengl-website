@@ -4,10 +4,7 @@
 changing every 5-7 seconds or so. The text in the box will come from the
 project-specific information for that project from its own project page) -->
 <div class="hero">
-  <?php if (function_exists('slideshow')) { slideshow(true, "1", false, array()); } ?>
-</div>
-
-
+  <ul class="hero-slideshow">
 <?php
 $Q = new GetPostsQuery();
 $args = array();
@@ -16,24 +13,33 @@ $args['post_status'] = 'publish';
 $args['orderby'] = 'post_date';
 $args['order'] = 'DESC';
 $results = $Q->get_posts($args);
-?>
-<div class="hero">
-  <ul class="hero-slideshow">
-<?php
 foreach ($results as $r) {
-
   if ($r['hero_image']) {
     $img = get_post_complete($r['hero_image']);
-    echo '<li>';
-    echo '<p>'. $r['post_content'] .'</p>';
-    echo '<img src="' . $img['guid'] . '">';
-    // echo '<a href="' . $img['permalink'] . '"><img src="' . CCTM::filter($img, 'to_image_src') . '"></a>';
-    echo '</li>';
+    echo '<li><img src="' . $img['guid'] . '"" title="'. $r['post_content'] . '"></li>';
   }
 }
 ?>
   </ul>
+  <div id="hero-pager-wrapper">
+    <div id="hero-pager">
+    <?php
+    $i = 0;
+    foreach ($results as $r) {
+      if ($r['bottom_slider_image']) {
+        $img = get_post_complete($r['bottom_slider_image']);
+        echo '<a data-slide-index="'.$i.'" href=""><img src="' . $img['guid'] . '" /></a>';
+        $i++;
+      }
+    }
+    ?>
+    </div>
+  </div>
+
 </div>
+
+
+
 
 <div class="innards bottomless">
   <div class="titles">
