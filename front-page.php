@@ -11,8 +11,7 @@ project-specific information for that project from its own project page) -->
 <?php
 $Q = new GetPostsQuery();
 $args = array();
-$args['post_type'] =  'hero_image';
-$args['post_status'] = 'publish';
+$args['post_type'] =  'heros';
 $args['post_status'] = 'publish';
 $args['orderby'] = 'post_date';
 $args['order'] = 'DESC';
@@ -21,20 +20,13 @@ $results = $Q->get_posts($args);
 <div class="hero">
   <ul class="hero-slideshow">
 <?php
-
 foreach ($results as $r) {
-  // print_r($r);
-  if ($r['hero_images']) {
-    // print_r($r['hero_images']);
-    $img = get_post_complete($r['hero_images'][0]);
-    print_r($img);
-    // $hero_images_array = get_custom_field('hero_images:to_array', 'to_image_src');
-    // foreach ($hero_images_array as $img) {
-    //     printf('<li><img src="%s"/></li>', $img);
-    // }
-    // add title to image for caption
+
+  if ($r['hero_image']) {
+    $img = get_post_complete($r['hero_image']);
     echo '<li>';
-    echo '<a href="' . $img['permalink'] . '"><img src="' . $img['guid'] . '"></a>';
+    echo '<p>'. $r['post_content'] .'</p>';
+    echo '<img src="' . $img['guid'] . '">';
     // echo '<a href="' . $img['permalink'] . '"><img src="' . CCTM::filter($img, 'to_image_src') . '"></a>';
     echo '</li>';
   }
