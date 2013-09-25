@@ -2234,47 +2234,56 @@ footer {
 .project .top .bx-wrapper .bx-next:hover {
   background-position: 0 -273px;
 }
-/* line 51, ../scss/_sliders.scss */
+/* line 47, ../scss/_sliders.scss */
+.project .top .bx-caption {
+  padding: 8px 10px;
+}
+/* line 49, ../scss/_sliders.scss */
+.project .top .bx-caption .title {
+  color: #fff;
+  font-size: 0.875em;
+}
+/* line 55, ../scss/_sliders.scss */
 .project .bottom .bx-wrapper .bx-prev, .project .bottom .bx-wrapper .bx-next {
   top: 16px !important;
 }
-/* line 52, ../scss/_sliders.scss */
+/* line 56, ../scss/_sliders.scss */
 .project .bottom .bx-wrapper .bx-prev {
   background-position: 0 -156px;
   left: 0;
 }
-/* line 55, ../scss/_sliders.scss */
+/* line 59, ../scss/_sliders.scss */
 .project .bottom .bx-wrapper .bx-prev:hover {
   background-position: 0 -234px;
 }
-/* line 57, ../scss/_sliders.scss */
+/* line 61, ../scss/_sliders.scss */
 .project .bottom .bx-wrapper .bx-next {
   background-position: 0 -195px;
   right: 0;
 }
-/* line 60, ../scss/_sliders.scss */
+/* line 64, ../scss/_sliders.scss */
 .project .bottom .bx-wrapper .bx-next:hover {
   background-position: 0 -273px;
 }
 
-/* line 68, ../scss/_sliders.scss */
+/* line 72, ../scss/_sliders.scss */
 .hero {
   margin-bottom: 60px;
 }
-/* line 71, ../scss/_sliders.scss */
+/* line 75, ../scss/_sliders.scss */
 .hero .bx-viewport {
   border-width: 0;
 }
-/* line 72, ../scss/_sliders.scss */
+/* line 76, ../scss/_sliders.scss */
 .hero .bx-wrapper {
   margin-bottom: 0;
 }
-/* line 73, ../scss/_sliders.scss */
+/* line 77, ../scss/_sliders.scss */
 .hero ul.hero-slideshow {
   margin: 0;
   padding: 0;
 }
-/* line 78, ../scss/_sliders.scss */
+/* line 82, ../scss/_sliders.scss */
 .hero .bx-caption {
   position: absolute;
   top: 42px;
@@ -2283,11 +2292,11 @@ footer {
   bottom: auto;
   background-color: transparent;
 }
-/* line 85, ../scss/_sliders.scss */
+/* line 89, ../scss/_sliders.scss */
 .hero .bx-caption .title, .hero .bx-caption .bottom {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 86, ../scss/_sliders.scss */
+/* line 90, ../scss/_sliders.scss */
 .hero .bx-caption .title {
   color: #000;
   font-family: 'Open Sans', sans-serif;
@@ -2300,14 +2309,14 @@ footer {
   border-bottom: 0;
   font-size: 0.875em;
 }
-/* line 99, ../scss/_sliders.scss */
+/* line 103, ../scss/_sliders.scss */
 .hero .bx-caption .bottom {
   border: solid 3px #fff;
   border-top: 0;
   border-bottom: 0;
   height: 20px;
 }
-/* line 108, ../scss/_sliders.scss */
+/* line 112, ../scss/_sliders.scss */
 .hero #hero-pager-wrapper {
   position: absolute;
   z-index: 9999;
@@ -2315,17 +2324,17 @@ footer {
   border-top: solid 1px #fff;
   width: 100%;
 }
-/* line 115, ../scss/_sliders.scss */
+/* line 119, ../scss/_sliders.scss */
 .hero #hero-pager {
   margin-left: 58px;
 }
-/* line 117, ../scss/_sliders.scss */
+/* line 121, ../scss/_sliders.scss */
 .hero #hero-pager img {
-  border: solid 1px #fff;
+  border: solid 1px #000;
   border-top: 0;
   -webkit-filter: grayscale(100%);
 }
-/* line 121, ../scss/_sliders.scss */
+/* line 125, ../scss/_sliders.scss */
 .hero #hero-pager img:hover {
   -webkit-filter: grayscale(0);
 }

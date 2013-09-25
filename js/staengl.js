@@ -13,6 +13,7 @@ $('.hero-slideshow').bxSlider({
 
 $('.project-slideshow').bxSlider({
   adaptiveHeight: true,
+  captions: true,
   mode: 'fade',
   pager: false
 });

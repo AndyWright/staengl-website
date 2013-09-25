@@ -20,11 +20,17 @@
     <div class="two">
         <ul class="project-slideshow">
 <?php
-$project_images_array = get_custom_field('project_images:to_array', 'to_image_src');
-foreach ($project_images_array as $img) {
-    printf('<li><img src="%s"/></li>', $img);
-    print_r($img);
+$project_images_array = get_custom_field('project_images:to_array');
+foreach ($project_images_array as $img_id) {
+    $img = get_post_complete($img_id);
+    // print_r($img);
+    echo '<li><img src="' . $img['guid'] . '"" title="'. $img['post_excerpt'] . '"></li>';
+    // printf('<li><img src="%s" title="%s"/></li>', $img['guid'], $img['caption']);
 }
+// $project_images_array = get_custom_field('project_images:to_array', 'to_image_src');
+// foreach ($project_images_array as $img) {
+//     printf('<li><img src="%s"/></li>', $img);
+// }
 ?>
         </ul>
     </div>

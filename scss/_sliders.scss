@@ -44,6 +44,10 @@
         &:hover { background-position: 0 -273px; }
       }
     }
+    .bx-caption {
+      padding: 8px 10px;
+      .title { color: #fff; font-size: emCalc(14px); }
+    }
   }
 
   .bottom {
@@ -115,7 +119,7 @@ $hero-inner-offset-left: 58px;
   #hero-pager {
     margin-left: $hero-inner-offset-left;
     img {
-      border: solid 1px #fff;
+      border: solid 1px #000;
       border-top: 0;
       -webkit-filter: grayscale(100%);
       &:hover { -webkit-filter: grayscale(0); }
