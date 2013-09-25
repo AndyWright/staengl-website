@@ -36,6 +36,9 @@ namespace :theme do
 
   desc "Push Theme"
   task :push do
+    cmd = "compass compile -e production --force"
+    puts cmd
+    system cmd
     cmd = "rsync -avz  --exclude-from 'exclude.txt' --delete #{local_theme}/ #{ssh_alias}:#{remote_theme}/"
     puts cmd
     system cmd

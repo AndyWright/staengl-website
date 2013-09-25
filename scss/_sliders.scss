@@ -71,7 +71,6 @@
 $hero-inner-offset-left: 58px;
 .hero {
   margin-bottom: 60px;
-
   .bx-viewport { border-width: 0; }
   .bx-wrapper { margin-bottom: 0; }
   ul.hero-slideshow {
@@ -119,7 +118,7 @@ $hero-inner-offset-left: 58px;
   #hero-pager {
     margin-left: $hero-inner-offset-left;
     img {
-      border: solid 1px #000;
+      border: solid 1px #fff;
       border-top: 0;
       -webkit-filter: grayscale(100%);
       &:hover { -webkit-filter: grayscale(0); }
