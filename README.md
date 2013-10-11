@@ -7,7 +7,6 @@ made some good use of [this github repo](https://github.com/wilhelser/WordPress-
 
 TODO:
 
-* show information in slideshow
 * set up wiki and document workflow
 * set up hosting
 * make rsync deploy with css and js compression
