@@ -46,7 +46,12 @@
     }
     .bx-caption {
       padding: 8px 10px;
-      .title { color: #fff; font-size: emCalc(14px); }
+
+      .title {
+        color: #fff;
+        font-size: emCalc(14px);
+
+      }
     }
   }
 
@@ -83,7 +88,7 @@ $hero-inner-offset-left: 58px;
     top: 42px;
     left: $hero-inner-offset-left - 1;
     width: 282px;
-    bottom: auto;
+    // bottom: auto;
     background-color: transparent;
     .title, .bottom { background-color: rgba(255, 255, 255, 0.75); }
     .title {
@@ -92,20 +97,26 @@ $hero-inner-offset-left: 58px;
       line-height: 1.5em;
       color: $medium-greyish;
       // margin-top: 11px 4px;
-      padding: 21px 11px 0 11px;
+      padding: 8px 11px 11px 11px;
       min-height: 71px;
       margin: 0 1px;
       border: solid 1px #fff;
       border-bottom: 0;
       font-size: emCalc(14px);
+      h4 {
+        margin: 0;
+        font-size: emCalc(22px);
+        color: darken($footer-green, 12);
+      }
+      p { margin: 4px 0; }
     }
     .bottom {
-      border: solid 3px #fff;
-      border-top: 0;
-      border-bottom: 0;
-      height: 20px;
-      // margin-left: -1px;
-      // margin-right: -1px;
+      display: none;
+      // border: solid 1px #fff;
+      // border-top: 0;
+      // border-bottom: 0;
+      // height: 20px;
+      // margin: 0 1px;
     }
   }
   #hero-pager-wrapper {

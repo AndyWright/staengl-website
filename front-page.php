@@ -35,11 +35,7 @@ foreach ($results as $r) {
     ?>
     </div>
   </div>
-
 </div>
-
-
-
 
 <div class="innards bottomless">
   <div class="titles">

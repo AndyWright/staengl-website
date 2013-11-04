@@ -332,7 +332,8 @@ footer {
     .one { margin-right: 30px; }
 
     .one-category {
-      margin-bottom: 66px;
+      @include clearfix;
+      margin-bottom: 1px;
     }
     .one-project {
       @include clearfix;

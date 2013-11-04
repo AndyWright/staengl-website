@@ -86,3 +86,9 @@ RewriteRule . /index.php [L]
 
 # END WordPress
 ```
+
+
+3. We're getting a pop-up window containing code when we mouse over the large Hero pictures on the Main Page (esp. on the Dovetail pic and the Crossings pic) - can we make that go away?
+
+4. Can we change the format of the Projects page? We'd like to do away with the "Current Projects" category and have the MEP Design projects grouped in two columns at the top, with "Energy Studies" in two columns under that and "Commissioning Projects" in two columns at the bottom. So if we add more MEP Design projects here, both the other categories will get bumped down the page a bit. Does that make sense?
+
