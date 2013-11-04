@@ -7,8 +7,10 @@ made some good use of [this github repo](https://github.com/wilhelser/WordPress-
 
 TODO:
 
+* hero auto-height
+
 * set up wiki and document workflow
-* set up hosting
+* * set up hosting
 * make rsync deploy with css and js compression
 * 404, 500, error pages
 

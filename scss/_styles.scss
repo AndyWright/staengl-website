@@ -26,11 +26,8 @@ header, footer, div.innards {
 div.hero {
   @include container;
   padding: 0;
-  // margin-top: -22px;
+  height: 508px;
   z-index: 0 !important;
-  // img {
-
-  // }
 }
 
 .clear { @include clearfix; }
