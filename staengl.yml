@@ -7,7 +7,7 @@ pre:
 #  - mysql.server start
 #  - export RBENV_DIR=
 # socket_name: foo # Not needed. Remove to use default socket
-tabs:
+windows:
   - staengl: sub3 . && pull
   - compass: compass watch
   - server: ssh jimnist
