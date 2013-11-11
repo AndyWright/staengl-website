@@ -18,6 +18,7 @@
     <?php else: ?>
       <?php get_template_part('notfound'); ?>
     <?php endif; ?>
+    <p>You can download Galen's Resume <a href="<?php bloginfo('template_directory');?>/documents/Staengl_Resume_2013.pdf" target="_blank">here</a>.</p>
     </div>
     <div class="headshot">
       <img src="<?php bloginfo('template_directory');?>/img/headshot.jpg" >
@@ -25,9 +26,8 @@
   </div>
   <div class="clear"></div>
 
-  <div class="clipboard">
-    <p>You can download Galen's Resume <a href="<?php bloginfo('template_directory');?>/documents/Staengl_Resume_2013.pdf" target="_blank">here</a>.</p>
-    <img src="<?php bloginfo('template_directory');?>/img/clipboard.jpg" >
+  <div class="piping">
+    <img src="<?php bloginfo('template_directory');?>/img/Crescent-Square-Duct-Rendering-2.jpg" >
   </div>
   <div class="clear"></div>
 

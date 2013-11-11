@@ -273,7 +273,30 @@ footer {
 }
 
 .services {
-  h3 { margin-top: 44px; }
+  h3 { margin-top: 11px; }
+  left { float: left;  }
+  right { float: right; }
+  .mep, .energy-modeling, .energy-analysis, .commissioning-services {
+    @include clearfix;
+    margin-top: 33px;
+  }
+  .mep { margin-top: 0; }
+  .mep {
+    .left { width: 450px; }
+    .right { width: 300px; }
+  }
+  .energy-modeling {
+    .left { width: 375px; padding-top: 11px; }
+    .right { width: 400px; }
+  }
+  .energy-analysis {
+    .left { width: 375px;  }
+    .right { width: 400px; padding-top: 22px; }
+  }
+  .commissioning-services {
+    .left { width: 180px; padding-top: 11px; }
+    .right { width: 600px; }
+  }
 }
 .alignright { float: right; }
 
@@ -290,10 +313,9 @@ footer {
     float: left;
     width: 220px;
   }
-  .clipboard {
-    margin-left: 150px;
-    margin-bottom: 50px;
-    img { margin: 0 44px 0 60px; }
+  .piping {
+    margin: 77px 0 20px 0;
+    img { margin: 0; }
   }
 
 }

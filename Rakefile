@@ -1,17 +1,32 @@
 #
 # tasks for deploying and migrating databases
 #
-ssh_alias          = "jimnist"  # jimnist is
-remote_root        = "/home/jimnist/staengl.engine-earring.com" #path to your WordPress installation
+
+# jimnist
+# ssh_alias          = "jimnist"  # jimnist is
+# remote_root        = "/home/jimnist/staengl.engine-earring.com" #path to your WordPress installation
+# remote_theme       = File.join "#{remote_root}", "wp-content/themes/staengl-website"  #Path to your theme directory
+# remote_plugins     = "" # Path to your plugins directory
+# remote_mu          = "" # Path to your MU plugins directory if you're using it
+# remote_vhost       = "staengl.engine-earring.com" # example.com
+# remote_db_user     = "staenglengineear"
+# remote_db_password = "iK74^xmH"
+# remote_db_name     = "staengl_engine_earring_c"
+# remote_db_host     = "mysql.staengl.engine-earring.com"
+# remote_prefix      = 'wp\_gxiyhv\_'  # wp_gxiyhv_ - escaped for sed
+
+# beta
+ssh_alias          = "staengl"
+remote_root        = "/home/galsta1/beta.staenglengineering.com" #path to your WordPress installation
 remote_theme       = File.join "#{remote_root}", "wp-content/themes/staengl-website"  #Path to your theme directory
-remote_plugins     = "" # Path to your plugins directory
+remote_plugins     = "/home/galsta1/beta.staenglengineering.com/wp-content/plugins" # Path to your plugins directory
 remote_mu          = "" # Path to your MU plugins directory if you're using it
-remote_vhost       = "staengl.engine-earring.com" # example.com
-remote_db_user     = "staenglengineear"
-remote_db_password = "iK74^xmH"
-remote_db_name     = "staengl_engine_earring_c"
-remote_db_host     = "mysql.staengl.engine-earring.com"
-remote_prefix      = 'wp\_gxiyhv\_'  # wp_gxiyhv_ - escaped for sed
+remote_vhost       = "beta.staenglengineering.com" # example.com
+remote_db_user     = "betastaenglengin"
+remote_db_password = "aDBy8vYk"
+remote_db_name     = "beta_staenglengineering_"
+remote_db_host     = "mysql.beta.staenglengineering.com"
+remote_prefix      = 'wp\_7xmfjj\_'  # wp_7xmfjj_  - escaped for sed
 
 local_vhost       = "staengl.dev"
 local_db_user     = "wp"
@@ -58,7 +73,7 @@ namespace :db do
       "mysql -h #{local_db_host} -u #{local_db_user} -p#{local_db_password} #{local_db_name}  < tmp/remote_dump.sql"
     ].each do |cmd|
       puts cmd
-      system cmd
+      # system cmd
     end
   end
 
@@ -81,22 +96,30 @@ end
 namespace :uploads do
   desc "Pull Uploads"
   task :pull do
-    system( "rsync -avzr  #{ssh_alias}:#{remote_root}/wp-content/uploads/  #{local_wp}/wp-content/uploads/")
+    cmd = "rsync -avzr  #{ssh_alias}:#{remote_root}/wp-content/uploads/  #{local_wp}/wp-content/uploads/"
+    puts cmd
+    # system cmd
   end
   desc "Push Uploads"
   task :push do
-    system( "rsync -avzr  #{local_wp}/wp-content/uploads/ #{ssh_alias}:#{remote_root}/wp-content/uploads/ ")
+    cmd = "rsync -avzr  #{local_wp}/wp-content/uploads/ #{ssh_alias}:#{remote_root}/wp-content/uploads/ "
+    puts cmd
+    # system cmd
   end
 end
 
 namespace :plugins do
   desc "Push Plugins"
   task :push do
-    system( "rsync -avz #{local_plugins}/ #{ssh_alias}:#{remote_plugins}/")
+    cmd = "rsync -avz #{local_plugins}/ #{ssh_alias}:#{remote_plugins}/"
+    puts cmd
+    # system cmd
   end
   desc "Pull Plugins"
   task :pull do
-    system( "rsync -avz #{ssh_alias}:#{remote_plugins}/ #{local_plugins}/")
+    cmd = "rsync -avz #{ssh_alias}:#{remote_plugins}/ #{local_plugins}/"
+    puts cmd
+    # system cmd
   end
 end
 

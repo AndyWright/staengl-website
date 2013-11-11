@@ -10,4 +10,4 @@ pre:
 windows:
   - staengl: sub3 . && pull
   - compass: compass watch
-  - server: ssh jimnist
+  - server: ssh staengl
