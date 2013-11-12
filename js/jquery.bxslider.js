@@ -684,11 +684,11 @@
 			// cycle through each child
 			slider.children.each(function(index){
 				// get the image title attribute
-				var title = $(this).find('img:first').attr('title');
+				var title = $(this).find('img:first').attr('data-caption'); // .attr('title');
 				// append the caption
 				if (title != undefined && ('' + title).length) {
-                    $(this).append('<div class="bx-caption"><div class="title">' + title + '</div><div class="bottom"></div></div>');
-                }
+	          $(this).append('<div class="bx-caption"><div class="title">' + title + '</div><div class="bottom"></div></div>');
+	      }
 			});
 		}
 

@@ -16,7 +16,7 @@ $results = $Q->get_posts($args);
 foreach ($results as $r) {
   if ($r['hero_image']) {
     $img = get_post_complete($r['hero_image']);
-    echo '<li><img src="' . $img['guid'] . '"" title="'. $r['post_content'] . '"></li>';
+    echo '<li><img src="' . $img['guid'] . '"" data-caption="'. $r['post_content'] . '"></li>';
   }
 }
 ?>
