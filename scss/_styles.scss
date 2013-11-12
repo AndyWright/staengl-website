@@ -283,18 +283,39 @@ footer {
   .mep { margin-top: 0; }
   .mep {
     .left { width: 450px; }
-    .right { width: 300px; }
+    .right {
+      width: 300px;
+      height: 375px;
+      background: url(../img/Crescent-Square-Duct-Rendering-1.jpg) no-repeat top right;
+    }
   }
   .energy-modeling {
-    .left { width: 375px; padding-top: 11px; }
+    .left {
+      width: 375px;
+      height: 172px;
+      margin-top: 11px;
+      background: url(../img/long-bridge.jpg) no-repeat top right;
+    }
     .right { width: 400px; }
   }
   .energy-analysis {
-    .left { width: 375px;  }
-    .right { width: 400px; padding-top: 22px; }
+    .left {
+      width: 375px;
+    }
+    .right {
+      width: 400px;
+      height: 228px;
+      margin-top: 22px;
+      background: url(../img/bath.jpg) no-repeat top right;
+    }
   }
   .commissioning-services {
-    .left { width: 180px; padding-top: 11px; }
+    .left {
+      width: 175px;
+      height: 212px;
+      margin-top: 11px;
+      background: url(../img/clipboard.jpg) no-repeat top left;
+  }
     .right { width: 600px; }
   }
 }
