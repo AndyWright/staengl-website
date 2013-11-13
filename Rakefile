@@ -17,12 +17,12 @@
 
 # beta
 ssh_alias          = "staengl"
-remote_root        = "/home/galsta1/beta.staenglengineering.com" #path to your WordPress installation
+remote_root        = "/home/galsta1/staenglengineering.com" #path to your WordPress installation
 remote_theme       = File.join "#{remote_root}", "wp-content/themes/staengl-website"  #Path to your theme directory
-remote_plugins     = "/home/galsta1/beta.staenglengineering.com/wp-content/plugins" # Path to your plugins directory
+remote_plugins     = "/home/galsta1/staenglengineering.com/wp-content/plugins" # Path to your plugins directory
 remote_mu          = "" # Path to your MU plugins directory if you're using it
-remote_vhost       = "beta.staenglengineering.com" # example.com
-remote_db_user     = "betastaenglengin"
+remote_vhost       = "staenglengineering.com" # example.com
+remote_db_user     = "staengladmin"
 remote_db_password = "aDBy8vYk"
 remote_db_name     = "beta_staenglengineering_"
 remote_db_host     = "mysql.beta.staenglengineering.com"
