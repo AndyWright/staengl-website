@@ -13,8 +13,6 @@ wp-content/cache/
 wp-content/backups/
 sitemap.xml
 sitemap.xml.gz
-.ruby-gemset
-.ruby-version
 .sass-cache/
 tmp/
 vendor/plugins/royalslider-3.1.3
