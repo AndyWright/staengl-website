@@ -25,7 +25,7 @@ TODO:
 
 ###deploying
 ```sh
-$ rake theme:push
+rake theme:push
 ```
 
 image/media push from localhost to dreamhost didn't work..
@@ -41,11 +41,8 @@ make sure the pages use the proper templates.
 ###theme
 the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)
 
-there are instructions there for setting up local development environment.
-
-
 ```
-$ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/staengl-website
+ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/staengl-website
 ```
 ### install this
 * Custom Content Type Manager 0.9.7.11 - via admin tool
@@ -63,13 +60,26 @@ $ ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/
 * http://www.walmik.com/2012/03/manage-your-custom-wordpress-theme-using-git-instead-of-ftp/
 
 
-development
+development setup
 =====
-```
-$ ln -s ~/wrk/staengl/wordpress-3.6 ~/wrk/staengl/wordpress
-$ mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangle-website
-$ ln -s ~/wrk/staengl/staengle-website ~/wrk/staengle/wordpress/wp-content/themes/wp-zurb-boilerplate
-```
+* setup ruby - reccomend via [rvm](https://rvm.io/) so that you can run the **rake** tasks
+* set up a local alias for localhost (used by apache setup) by editing **/etc/hosts**
+  * ```127.0.0.1    staengl.dev```
+* make apache work on your dev machine for php (i have a mac, instructions [here](https://discussions.apple.com/docs/DOC-3083))
+* set up a local mysql server (i use [homebrew](http://brew.sh/) on a mac)
+* create a database and user for local dev that matching the ones in **Rakefile**
+  * ```mysql -u root```
+  * ```create database staengl; GRANT ALL PRIVILEGES ON staengl.* TO wp@staengle.dev IDENTIFIED BY 'meeS00'```
+* change to your staengle working directory (here assumed to be **~/wrk/staengl**), check out the code, download latest wordpress and set up some aliases
+  ```
+  cd ~/wrk/staengl
+  git checkout git@github.com:AndyWright/staengl-website.git
+  wget http://wordpress.org/wordpress-4.1.1.zip
+  unzip wordpress-4.1.1.zip
+  ln -s ~/wrk/staengl/wordpress-4.1.1 ~/wrk/staengl/wordpress
+  mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangle-website
+  ln -s ~/wrk/staengl/staengle-website ~/wrk/staengle/wordpress/wp-content/themes/wp-zurb-boilerplate
+  ```
 
 ### deployment
 * make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:

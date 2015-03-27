@@ -1,13 +1,16 @@
 # ~/.tmuxinator/staengl.yml
 # ln -s ~/wrk/staengl/staengl-website/staengl.yml ~/.tmuxinator/staengl.yml
-# http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project
-project_name: staengl
-project_root: ~/wrk/staengl/staengl-website
-pre:
-#  - mysql.server start
-#  - export RBENV_DIR=
-# socket_name: foo # Not needed. Remove to use default socket
+
+name: staengl
+root: /Users/jimnist/wrk/staengl/staengl-website
+
 windows:
-  - staengl: sub3 . && pull
-  - compass: compass watch
-  - server: ssh staengl
+  - staengl:
+    - subl .
+    - pull
+  - compass:
+    - sleep 16
+    - compass watch
+
+# - server:
+#   - ssh staengl
