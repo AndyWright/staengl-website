@@ -5,17 +5,6 @@ wordpress website for staengl engineering
 
 made some good use of [this github repo](https://github.com/wilhelser/WordPress-Scripts)
 
-TODO:
-
-* hero auto-height
-
-* set up wiki and document workflow
-* * set up hosting
-* make rsync deploy with css and js compression
-* 404, 500, error pages
-
-* home page
-  * make Hero image rotator work
 
 ###image sizes
 * Project Slideshow - 520px wide
@@ -41,9 +30,6 @@ make sure the pages use the proper templates.
 ###theme
 the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp-zurb-boilerplate)
 
-```
-ln -s ~/wrk/staengl/staengl-website ~/wrk/staengl/wordpress/wp-content/themes/staengl-website
-```
 ### install this
 * Custom Content Type Manager 0.9.7.11 - via admin tool
 * Relative Image URLs 2.0 - via admin tool
@@ -71,15 +57,15 @@ development setup
   * ```mysql -u root```
   * ```create database staengl; GRANT ALL PRIVILEGES ON staengl.* TO wp@staengle.dev IDENTIFIED BY 'meeS00'```
 * change to your staengle working directory (here assumed to be **~/wrk/staengl**), check out the code, download latest wordpress and set up some aliases
-  ```
-  cd ~/wrk/staengl
-  git checkout git@github.com:AndyWright/staengl-website.git
-  wget http://wordpress.org/wordpress-4.1.1.zip
-  unzip wordpress-4.1.1.zip
-  ln -s ~/wrk/staengl/wordpress-4.1.1 ~/wrk/staengl/wordpress
-  mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangle-website
-  ln -s ~/wrk/staengl/staengle-website ~/wrk/staengle/wordpress/wp-content/themes/wp-zurb-boilerplate
-  ```
+```
+cd ~/wrk/staengl
+git checkout git@github.com:AndyWright/staengl-website.git
+wget http://wordpress.org/wordpress-4.1.1.zip
+unzip wordpress-4.1.1.zip
+ln -s ~/wrk/staengl/wordpress-4.1.1 ~/wrk/staengl/wordpress
+mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangle-website
+ln -s ~/wrk/staengl/staengle-website ~/wrk/staengle/wordpress/wp-content/themes/wp-zurb-boilerplate
+```
 
 ### deployment
 * make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:
@@ -99,7 +85,17 @@ RewriteRule . /index.php [L]
 # END WordPress
 ```
 
+###TODO:
 
+* hero auto-height
+* make rsync deploy with css and js compression
+* 404, 500, error pages
+* home page
+  * make Hero image rotator work
+
+
+
+============
 3. We're getting a pop-up window containing code when we mouse over the large Hero pictures on the Main Page (esp. on the Dovetail pic and the Crossings pic) - can we make that go away?
 
 4. Can we change the format of the Projects page? We'd like to do away with the "Current Projects" category and have the MEP Design projects grouped in two columns at the top, with "Energy Studies" in two columns under that and "Commissioning Projects" in two columns at the bottom. So if we add more MEP Design projects here, both the other categories will get bumped down the page a bit. Does that make sense?
