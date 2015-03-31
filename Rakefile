@@ -16,6 +16,19 @@
 # remote_prefix      = 'wp\_gxiyhv\_'  # wp_gxiyhv_ - escaped for sed
 
 # beta
+# ssh_alias          = "staengl"
+# remote_root        = "/home/galsta1/staenglengineering.com" #path to your WordPress installation
+# remote_theme       = File.join "#{remote_root}", "wp-content/themes/staengl-website"  #Path to your theme directory
+# remote_plugins     = "/home/galsta1/staenglengineering.com/wp-content/plugins" # Path to your plugins directory
+# remote_mu          = "" # Path to your MU plugins directory if you're using it
+# remote_vhost       = "staenglengineering.com" # example.com
+# remote_db_user     = "staengladmin"
+# remote_db_password = "aDBy8vYk"
+# remote_db_name     = "beta_staenglengineering_"
+# remote_db_host     = "mysql.beta.staenglengineering.com"
+# remote_prefix      = 'wp\_7xmfjj\_'  # wp_7xmfjj_  - escaped for sed
+
+# production
 ssh_alias          = "staengl"
 remote_root        = "/home/galsta1/staenglengineering.com" #path to your WordPress installation
 remote_theme       = File.join "#{remote_root}", "wp-content/themes/staengl-website"  #Path to your theme directory
@@ -23,10 +36,11 @@ remote_plugins     = "/home/galsta1/staenglengineering.com/wp-content/plugins" #
 remote_mu          = "" # Path to your MU plugins directory if you're using it
 remote_vhost       = "staenglengineering.com" # example.com
 remote_db_user     = "staengladmin"
-remote_db_password = "aDBy8vYk"
+remote_db_password = "m0rningw00d"
 remote_db_name     = "beta_staenglengineering_"
 remote_db_host     = "mysql.beta.staenglengineering.com"
 remote_prefix      = 'wp\_7xmfjj\_'  # wp_7xmfjj_  - escaped for sed
+
 
 local_vhost       = "staengl.dev"
 local_db_user     = "wp"
@@ -35,8 +49,8 @@ local_db_name     = "staengl"
 local_db_host     = "127.0.0.1"
 local_prefix      = 'wp\_'  # wp_ - escaped for sed
 
-local_root        = "/Users/jim/wrk/staengl/staengl-website"
-local_wp        = "/Users/jim/wrk/staengl/wordpress"
+local_root        = "/Users/jimnist/wrk/staengl/staengl-website"
+local_wp        = "/Users/jimnist/wrk/staengl/wordpress"
 local_theme       = local_root
 local_plugins     = ""
 local_mu          = ""
@@ -88,7 +102,7 @@ namespace :db do
       "mysql -h #{remote_db_host} -u #{remote_db_user} -p#{remote_db_password} #{remote_db_name}  < tmp/local_dump.sql"
     ].each do |cmd|
       puts cmd
-      system cmd
+      # system cmd
     end
   end
 end

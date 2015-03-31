@@ -51,11 +51,31 @@ development setup
 * setup ruby - reccomend via [rvm](https://rvm.io/) so that you can run the **rake** tasks
 * set up a local alias for localhost (used by apache setup) by editing **/etc/hosts**
   * ```127.0.0.1    staengl.dev```
-* make apache work on your dev machine for php (i have a mac, instructions [here](https://discussions.apple.com/docs/DOC-3083))
+* make apache work on your dev machine for php
+  * (i have a mac, instructions [start here](https://discussions.apple.com/docs/DOC-3083))
+  * set up a virtual host [like this]()
+  * here is the virtual host config:
+```
+<VirtualHost *:80>
+    ServerAdmin jim@loco8.org
+    DocumentRoot "/Users/jimnist/wrk/staengl/wordpress"
+    ServerName staengl.dev
+    ServerAlias *.staengl.dev
+    ErrorLog "/private/var/log/apache2/staengl-error_log"
+    CustomLog "/private/var/log/apache2/staengl-access_log" common
+    <Directory "/Users/jimnist/wrk/staengl/wordpress">
+       AllowOverride All
+       Options FollowSymlinks Indexes MultiViews
+       Require all granted
+    </Directory>
+</VirtualHost>
+```
 * set up a local mysql server (i use [homebrew](http://brew.sh/) on a mac)
 * create a database and user for local dev that matching the ones in **Rakefile**
-  * ```mysql -u root```
-  * ```create database staengl; GRANT ALL PRIVILEGES ON staengl.* TO wp@staengle.dev IDENTIFIED BY 'meeS00'```
+```
+mysql -u root
+mysql> create database staengl; GRANT ALL PRIVILEGES ON staengl.* TO wp@'%'' IDENTIFIED BY 'meeS00';
+```
 * change to your staengle working directory (here assumed to be **~/wrk/staengl**), check out the code, download latest wordpress and set up some aliases
 ```
 cd ~/wrk/staengl
@@ -63,8 +83,8 @@ git checkout git@github.com:AndyWright/staengl-website.git
 wget http://wordpress.org/wordpress-4.1.1.zip
 unzip wordpress-4.1.1.zip
 ln -s ~/wrk/staengl/wordpress-4.1.1 ~/wrk/staengl/wordpress
-mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangle-website
-ln -s ~/wrk/staengl/staengle-website ~/wrk/staengle/wordpress/wp-content/themes/wp-zurb-boilerplate
+mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangl-website
+ln -s ~/wrk/staengl/staengl-website ~/wrk/staengle/wordpress/wp-content/themes/stangl-website
 ```
 
 ### deployment
