@@ -32,7 +32,6 @@ the staengl theme is based on [wp-zurb-boilerplate](https://github.com/ngn33r/wp
 
 ### install this
 * Custom Content Type Manager 0.9.7.11 - via admin tool
-* Relative Image URLs 2.0 - via admin tool
 
 ### site urls
 [local development](http://staengl.dev/company/)
@@ -76,16 +75,33 @@ development setup
 mysql -u root
 mysql> create database staengl; GRANT ALL PRIVILEGES ON staengl.* TO wp@'%'' IDENTIFIED BY 'meeS00';
 ```
-* change to your staengle working directory (here assumed to be **~/wrk/staengl**), check out the code, download latest wordpress and set up some aliases
+* change to your staengle working directory (here assumed to be **<staengl working dir>**), check out the code, download latest wordpress and set up some aliases
 ```
-cd ~/wrk/staengl
+cd <staengl working dir>
 git checkout git@github.com:AndyWright/staengl-website.git
 wget http://wordpress.org/wordpress-4.1.1.zip
 unzip wordpress-4.1.1.zip
-ln -s ~/wrk/staengl/wordpress-4.1.1 ~/wrk/staengl/wordpress
-mkdir ~/wrk/staengl/wordpress/wp-content/themes/stangl-website
-ln -s ~/wrk/staengl/staengl-website ~/wrk/staengle/wordpress/wp-content/themes/stangl-website
+ln -s <staengl working dir>/wordpress-4.1.1 <staengl working dir>/wordpress
+mkdir <staengl working dir>/wordpress/wp-content/themes/stangl-website
+ln -s <staengl working dir>/staengl-website <staengl working dir>/wordpress/wp-content/themes/stangl-website
 ```
+* set up **<staengl working dir>e/wordpress/wp-config.php** with same values from **./Rakefile**
+* manually install the following plugins in **<staengl working dir>/wordpress/wp-content/plugins/** :
+  * Custom Content Type Manager 0.9.7.13
+  * EWWW Image Optimizer
+  * WP Super Cache
+```
+cd wordpress/wp-content/plugins/
+wget https://downloads.wordpress.org/plugin/custom-content-type-manager.latest-stable.zip
+unzip custom-content-type-manager.latest-stable.zip
+wget https://downloads.wordpress.org/plugin/ewww-image-optimizer.2.2.2.zip
+unzip ewww-image-optimizer.2.2.2.zip
+wget https://downloads.wordpress.org/plugin/wp-super-cache.1.4.2.zip
+unzip wp-super-cache.1.4.2.zip
+mkdir ../ewww
+chmod 777 ../ewww/
+```
+* activate the installed plugins in **wp-admin**
 
 ### deployment
 * make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:
