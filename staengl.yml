@@ -8,6 +8,7 @@ windows:
   - staengl:
     - subl .
     - pull
+    - cat devinfo.txt
   - compass:
     - sleep 16
     - compass watch
