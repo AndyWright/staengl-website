@@ -2405,7 +2405,7 @@ footer {
 .hero #hero-pager-wrapper {
   position: absolute;
   z-index: 9999;
-  margin-top: -55px;
+  margin-top: 452px;
   border-top: solid 1px #fff;
   width: 100%;
 }

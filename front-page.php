@@ -1,10 +1,5 @@
 <?php get_header(); ?>
 
-<!-- (large project image will be from a slideshow of 4 or 5 project images –
-changing every 5-7 seconds or so. The text in the box will come from the
-project-specific information for that project from its own project page) -->
-<div class="hero">
-  <ul class="hero-slideshow">
 <?php
 $Q = new GetPostsQuery();
 $args = array();
@@ -13,14 +8,12 @@ $args['post_status'] = 'publish';
 $args['orderby'] = 'post_date';
 $args['order'] = 'DESC';
 $results = $Q->get_posts($args);
-foreach ($results as $r) {
-  if ($r['hero_image']) {
-    $img = get_post_complete($r['hero_image']);
-    echo '<li><img src="' . $img['guid'] . '"" data-caption="'. $r['post_content'] . '"></li>';
-  }
-}
 ?>
-  </ul>
+
+<!-- (large project image will be from a slideshow of 4 or 5 project images –
+changing every 5-7 seconds or so. The text in the box will come from the
+project-specific information for that project from its own project page) -->
+<div class="hero">
   <div id="hero-pager-wrapper">
     <div id="hero-pager">
     <?php
@@ -35,6 +28,17 @@ foreach ($results as $r) {
     ?>
     </div>
   </div>
+  <ul class="hero-slideshow">
+<?php
+foreach ($results as $r) {
+  if ($r['hero_image']) {
+    $img = get_post_complete($r['hero_image']);
+    echo '<li><img src="' . $img['guid'] . '"" data-caption="'. $r['post_content'] . '"></li>';
+  }
+}
+?>
+  </ul>
+
 </div>
 
 <div class="innards bottomless">

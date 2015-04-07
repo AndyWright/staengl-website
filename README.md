@@ -52,6 +52,10 @@ development setup
   * ```127.0.0.1    staengl.dev```
 * make apache work on your dev machine for php
   * (i have a mac, instructions [start here](https://discussions.apple.com/docs/DOC-3083))
+  * make sure mod_rewrite is turned on in **/etc/apache2/httpd.conf**
+```
+LoadModule rewrite_module libexec/apache2/mod_rewrite.so
+```
   * set up a virtual host [like this]()
   * here is the virtual host config:
 ```
@@ -85,6 +89,7 @@ ln -s <staengl working dir>/wordpress-4.1.1 <staengl working dir>/wordpress
 mkdir <staengl working dir>/wordpress/wp-content/themes/stangl-website
 ln -s <staengl working dir>/staengl-website <staengl working dir>/wordpress/wp-content/themes/stangl-website
 ```
+* make sure you have a __.htaccess__
 * set up **<staengl working dir>e/wordpress/wp-config.php** with same values from **./Rakefile**
 * manually install the following plugins in **<staengl working dir>/wordpress/wp-content/plugins/** :
   * Custom Content Type Manager 0.9.7.13
@@ -102,6 +107,7 @@ mkdir ../ewww
 chmod 777 ../ewww/
 ```
 * activate the installed plugins in **wp-admin**
+* import the custom content type definitions by navigating to __http://staengl.dev/wp-admin/admin.php?page=cctm_tools&a=import_def__ and importing __staengle_cctm_site.cctm.json__
 
 ### deployment
 * make sure __.htaccess__ is writable in the wordpress dir or set it to have this content:
@@ -126,13 +132,10 @@ RewriteRule . /index.php [L]
 * hero auto-height
 * make rsync deploy with css and js compression
 * 404, 500, error pages
-* home page
-  * make Hero image rotator work
 
+### things changed to fix heros
 
+* change markup to match other heros (added <p> tags)
+* changed code around positioning of the menus (really still not sure why the old way failed, but new way of positioning is definitely better strategy)
 
-============
-3. We're getting a pop-up window containing code when we mouse over the large Hero pictures on the Main Page (esp. on the Dovetail pic and the Crossings pic) - can we make that go away?
-
-4. Can we change the format of the Projects page? We'd like to do away with the "Current Projects" category and have the MEP Design projects grouped in two columns at the top, with "Energy Studies" in two columns under that and "Commissioning Projects" in two columns at the bottom. So if we add more MEP Design projects here, both the other categories will get bumped down the page a bit. Does that make sense?
 
