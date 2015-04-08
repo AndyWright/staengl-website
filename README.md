@@ -133,9 +133,13 @@ RewriteRule . /index.php [L]
 * make rsync deploy with css and js compression
 * 404, 500, error pages
 
-### things changed to fix heros
+### things changed to fix heros 2015-04-08
 
-* change markup to match other heros (added <p> tags)
 * changed code around positioning of the menus (really still not sure why the old way failed, but new way of positioning is definitely better strategy)
+* Editting the Hero via wp-admin:
+  * change markup to match other heros (added <p> tags)
+  * re-uploaded a thumbnail image. for some reason, it was not using the other uploaded one
+
+to change the sort order of heros, change the published date. most recent will show first.
 
 

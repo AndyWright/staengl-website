@@ -70,7 +70,7 @@ namespace :theme do
     system cmd
     cmd = "rsync -avz  --exclude-from 'exclude.txt' --delete #{local_theme}/ #{ssh_alias}:#{remote_theme}/"
     puts cmd
-    system cmd
+    # system cmd
   end
 end
 
